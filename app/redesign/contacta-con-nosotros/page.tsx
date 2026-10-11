@@ -3,46 +3,44 @@ import Link from "next/link";
 import { Icon } from "@/components/icons";
 import { PageHeading } from "../_components/page-heading";
 import { ContactForm } from "../_components/contact-form";
+import { contactReference } from "../_data/contact";
+
 export const metadata: Metadata = { title: "Contacta con nosotros" };
+
 export default function Contact() {
   return (
     <>
       <PageHeading
         eyebrow="PACKMAN / CONTACTO"
         title="Contacta con nosotros"
-        description="Consulta las preguntas frecuentes o prueba el formulario de contacto con datos de ejemplo."
+        description="Información de contacto publicada en Packman Vape."
       />
       <section className="cu-contact-layout cu-container">
         <div className="cu-contact-context">
+          <div className="cu-contact-card cu-contact-data">
+            <Icon name="pin" />
+            <h2>Datos de contacto</h2>
+            <dl>
+              <dt>Referencia de contacto</dt><dd>{contactReference.name}</dd>
+              <dt>Teléfono publicado</dt><dd>{contactReference.phone}</dd>
+              <dt>Correo publicado</dt><dd>{contactReference.email}</dd>
+            </dl>
+            <p className="cu-contact-disclaimer">
+              {contactReference.source} No se muestra la dirección postal
+              porque el sitio original contiene datos contradictorios.
+            </p>
+          </div>
           <div className="cu-contact-card">
             <Icon name="message" />
             <h2>Preguntas frecuentes</h2>
-            <p>
-              Encontrarás los nombres y las fotografías disponibles en el
-              catálogo, y respuestas a conceptos generales en FAQ.
-            </p>
+            <p>Puedes consultar la información disponible y las referencias en el catálogo.</p>
             <Link href="/redesign/faq" className="cu-text-link">
               Consultar las preguntas <Icon name="arrow" />
             </Link>
           </div>
-          <div className="cu-contact-card">
-            <Icon name="pin" />
-            <h2>Datos de contacto.</h2>
-            <p>
-              Los datos publicados de teléfono y ubicación presentan
-              inconsistencias. Necesitan confirmación del propietario antes de
-              incorporarse.
-            </p>
-            <span className="cu-verification-tag">
-              PENDIENTE DE CONFIRMACIÓN
-            </span>
-          </div>
           <div className="cu-contact-small">
             <Icon name="layers" />
-            <p>
-              Esta demo no gestiona ventas, atención comercial, pedidos ni
-              pagos.
-            </p>
+            <p>Esta propuesta de diseño no gestiona ventas, atención comercial, pedidos ni pagos.</p>
           </div>
         </div>
         <ContactForm />
