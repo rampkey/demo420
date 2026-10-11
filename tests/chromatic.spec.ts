@@ -54,7 +54,7 @@ test.describe("Chromatic without JavaScript", () => {
     ).toBe("1");
     await page.locator("summary").first().click();
     await expect(
-      page.getByText("No. Es un estudio visual independiente", {
+      page.getByText("Packman identifica una gama", {
         exact: false,
       }),
     ).toBeVisible();

@@ -1,11 +1,22 @@
 "use client";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { BrandLogo } from "@/components/brand-image";
 import { Icon } from "@/components/icons";
+import { navigation, isActivePage } from "../_data/navigation";
 export function ChromaticHeader() {
+  const pathname = usePathname();
   const [open, setOpen] = useState(false);
+  const [enhanced, setEnhanced] = useState(false);
   const button = useRef<HTMLButtonElement>(null);
+  const header = useRef<HTMLElement>(null);
+  useEffect(() => {
+    setEnhanced(true);
+  }, []);
+  useEffect(() => {
+    setOpen(false);
+  }, [pathname]);
   useEffect(() => {
     const escape = (event: KeyboardEvent) => {
       if (event.key === "Escape" && open) {
@@ -13,11 +24,36 @@ export function ChromaticHeader() {
         button.current?.focus();
       }
     };
+    const outside = (event: PointerEvent) => {
+      if (
+        open &&
+        event.target instanceof Node &&
+        !header.current?.contains(event.target)
+      )
+        setOpen(false);
+    };
+    const desktop = window.matchMedia("(min-width: 1121px)");
+    const resize = () => {
+      if (desktop.matches) setOpen(false);
+    };
     window.addEventListener("keydown", escape);
-    return () => window.removeEventListener("keydown", escape);
+    window.addEventListener("pointerdown", outside);
+    desktop.addEventListener("change", resize);
+    return () => {
+      window.removeEventListener("keydown", escape);
+      window.removeEventListener("pointerdown", outside);
+      desktop.removeEventListener("change", resize);
+    };
   }, [open]);
   return (
-    <header className="cu-header">
+    <header
+      ref={header}
+      className="cu-header"
+      data-enhanced={enhanced ? "true" : undefined}
+    >
+      <noscript>
+        <style>{`@media(max-width:1120px){.chromatic-page.cu-v2 .cu-header{position:relative}.chromatic-page.cu-v2 .cu-header .cu-navigation{display:flex}}`}</style>
+      </noscript>
       <div className="cu-nav-shell">
         <Link
           className="cu-brand"
@@ -26,9 +62,9 @@ export function ChromaticHeader() {
         >
           <BrandLogo />
           <span>
-            CHROMATIC
+            PACKMAN
             <br />
-            <b>UNDERGROUND</b>
+            <b>CHROMATIC UNDERGROUND</b>
           </span>
         </Link>
         <button
@@ -39,27 +75,33 @@ export function ChromaticHeader() {
           aria-expanded={open}
           aria-controls="chromatic-navigation"
           onClick={() => setOpen(!open)}
+          disabled={!enhanced}
         >
+          <span>Menú</span>
           <Icon name={open ? "close" : "menu"} />
         </button>
         <nav
           id="chromatic-navigation"
           className={`site-navigation cu-navigation ${open ? "is-open" : ""}`}
-          aria-label="Secciones de la portada"
+          aria-label="Navegación principal"
         >
-          {[
-            ["El universo", "#identidad"],
-            ["Archivo visual", "#galeria"],
-            ["El contexto", "#faq"],
-          ].map(([label, href]) => (
-            <a href={href} key={href} onClick={() => setOpen(false)}>
-              {label}
-            </a>
+          {navigation.map((item) => (
+            <Link
+              href={item.href}
+              key={item.href}
+              aria-current={
+                isActivePage(pathname, item.href) ? "page" : undefined
+              }
+              onClick={() => setOpen(false)}
+            >
+              <span>{item.label}</span>
+              <Icon name="arrow" />
+            </Link>
           ))}
+          <p className="cu-mobile-menu-note">
+            PACKMAN / INFORMACIÓN Y REFERENCIAS
+          </p>
         </nav>
-        <Link href="/original" className="cu-nav-reference">
-          Ver original <Icon name="arrow" />
-        </Link>
       </div>
     </header>
   );

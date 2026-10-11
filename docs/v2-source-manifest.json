@@ -1,0 +1,174 @@
+{
+  "accessed_on": "2026-10-11",
+  "timezone": "Europe/Madrid",
+  "method": "Read-only HTTPS GET of public pages and authorized primary images; TLS verification enabled. No WordPress code, commerce scripts or third-party widgets imported.",
+  "pages": [
+    {
+      "id": "sobre-nosotros",
+      "url": "https://packmanvape.es/sobre-nosotros/",
+      "final_url": "https://packmanvape.es/sobre-nosotros/",
+      "status": 200,
+      "bytes": 225693,
+      "sha256": "b9064c8e29de6a087b3cbbbe562e2fcc2ee9e1bb2ca937ebdf88c0bc5028e91c"
+    },
+    {
+      "id": "faq",
+      "url": "https://packmanvape.es/faq/",
+      "final_url": "https://packmanvape.es/faq/",
+      "status": 200,
+      "bytes": 244217,
+      "sha256": "fa0b7c78433070d211878ddd4ce8cb52b066fb7ad748b06a281314d4bae3a1fa"
+    },
+    {
+      "id": "contacta-con-nosotros",
+      "url": "https://packmanvape.es/contacta-con-nosotros/",
+      "final_url": "https://packmanvape.es/contacta-con-nosotros/",
+      "status": 200,
+      "bytes": 320442,
+      "sha256": "fd0038695ecf3595ef7d9db72c53d33aff9abd7786a14f67387bc5441379756a"
+    },
+    {
+      "id": "shop",
+      "url": "https://packmanvape.es/shop/",
+      "final_url": "https://packmanvape.es/shop/",
+      "status": 200,
+      "bytes": 456214,
+      "sha256": "7cd4b25dbf70b1645ac031df574fff649608c59c1fe13c154f87b5bce801a8f0"
+    },
+    {
+      "id": "mystery-og",
+      "url": "https://packmanvape.es/product/packman-mystery-og-2000mg-thc-espana/",
+      "final_url": "https://packmanvape.es/product/packman-mystery-og-2000mg-thc-espana/",
+      "status": 200,
+      "bytes": 318877,
+      "sha256": "1e38e12c76d6876bc7c918c20797f4b42d58a1df33956635d40f1b64fa13fe5d"
+    },
+    {
+      "id": "granddaddy-urkle",
+      "url": "https://packmanvape.es/product/comprar-packman-granddaddy-urkle-guia-vape-thc-espana/",
+      "final_url": "https://packmanvape.es/product/comprar-packman-granddaddy-urkle-guia-vape-thc-espana/",
+      "status": 200,
+      "bytes": 321262,
+      "sha256": "ba07922adac0d456bfd50dfda00f9af51de62d80d3ca87f78f95cbf6e4fb87a9"
+    },
+    {
+      "id": "cereal-skunk",
+      "url": "https://packmanvape.es/product/comprar-packman-cereal-skunk-2000mg-thc/",
+      "final_url": "https://packmanvape.es/product/comprar-packman-cereal-skunk-2000mg-thc/",
+      "status": 200,
+      "bytes": 319601,
+      "sha256": "e77917b4e2dd198d73b738afb677048b25726549bde41588fb1dbeba4b2da0c7"
+    },
+    {
+      "id": "berry-payton",
+      "url": "https://packmanvape.es/product/comprar-packman-berry-payton-2000mg-thc-vaper-thc-espana/",
+      "final_url": "https://packmanvape.es/product/comprar-packman-berry-payton-2000mg-thc-vaper-thc-espana/",
+      "status": 200,
+      "bytes": 320718,
+      "sha256": "e87eb1c20120398ea5c83dec7097c997ccf1c7af4ba6e3652c95cc9e929cd092"
+    },
+    {
+      "id": "mango-tango",
+      "url": "https://packmanvape.es/product/packman-mango-tango-2000-mg/",
+      "final_url": "https://packmanvape.es/product/packman-mango-tango-2000-mg/",
+      "status": 200,
+      "bytes": 323061,
+      "sha256": "28760271a5daca20e4d84d098bd41adbcca3de8bd78aeb4a7830a5968266c2bf"
+    },
+    {
+      "id": "variety-box-10",
+      "url": "https://packmanvape.es/product/packman-vapes-box-10-pack-variety-box/",
+      "final_url": "https://packmanvape.es/product/packman-vapes-box-10-pack-variety-box/",
+      "status": 200,
+      "bytes": 308416,
+      "sha256": "1f16d59cabdfb0e8299fc87566ca17a47a391f0f80963100da1add0047eea4bf"
+    },
+    {
+      "id": "variety-box-50",
+      "url": "https://packmanvape.es/product/pack-man-vape-box-50-pack-variety-box/",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "id": "variety-box-100",
+      "url": "https://packmanvape.es/product/comprar-packman-vape-bulk/",
+      "final_url": "https://packmanvape.es/product/comprar-packman-vape-bulk/",
+      "status": 200,
+      "bytes": 309562,
+      "sha256": "653ccb2da2b4f4a4ab4be1a9eaa96681f206ef3cedab5a342c7a11bb0a462560"
+    }
+  ],
+  "assets": [
+    {
+      "id": "mystery-og",
+      "source": "https://packmanvape.es/wp-content/uploads/2026/06/packman-mystery-og.webp",
+      "path": "/redesign/images/mystery-og.webp",
+      "width": 1000,
+      "height": 1000,
+      "bytes": 92864,
+      "sha256": "fea31b2dbc0c0d3656ab19e504de10c7d97356e18f4a891b9d073a60074ae758"
+    },
+    {
+      "id": "granddaddy-urkle",
+      "source": "https://packmanvape.es/wp-content/uploads/2026/06/packman-granddaddy-urkle-1.webp",
+      "path": "/redesign/images/granddaddy-urkle.webp",
+      "width": 510,
+      "height": 510,
+      "bytes": 23992,
+      "sha256": "822eba6da2fcfc7b0c1cd3456afc4cafdada23e378351f793500b504bf0e6511"
+    },
+    {
+      "id": "cereal-skunk",
+      "source": "https://packmanvape.es/wp-content/uploads/2026/06/packman-cereal-skunk.webp",
+      "path": "/redesign/images/cereal-skunk.webp",
+      "width": 1000,
+      "height": 1000,
+      "bytes": 79424,
+      "sha256": "6982c497327a2dc1f23b2dda918b89b1a5711d5e6eaddeda2514bc20226a527a"
+    },
+    {
+      "id": "berry-payton",
+      "source": "https://packmanvape.es/wp-content/uploads/2026/06/packman-berry-payton-1.webp",
+      "path": "/redesign/images/berry-payton.webp",
+      "width": 1000,
+      "height": 1000,
+      "bytes": 74074,
+      "sha256": "4a4e516f74522587b8187c066b5718e4e8cbd228b731d4e1cadd6f3edfb5fefa"
+    },
+    {
+      "id": "mango-tango",
+      "source": "https://packmanvape.es/wp-content/uploads/2026/06/packman-mango-tango-kaufens.webp",
+      "path": "/redesign/images/mango-tango.webp",
+      "width": 794,
+      "height": 719,
+      "bytes": 137574,
+      "sha256": "fc7421f934891517a71e9f311916f929caac74a6f26790c9b089c0a611f965e1"
+    },
+    {
+      "id": "variety-box-10",
+      "source": "https://packmanvape.es/wp-content/uploads/2026/06/Pack-Man-vapes-Box.webp",
+      "path": "/redesign/images/variety-box-10.webp",
+      "width": 1280,
+      "height": 960,
+      "bytes": 320520,
+      "sha256": "5ea1f2a60ca025d72b8f86ef8c99d483a5066261651abc9728e7be46d0213009"
+    },
+    {
+      "id": "variety-box-100",
+      "source": "https://packmanvape.es/wp-content/uploads/2026/06/Pack-Man-Disposable-Box.webp",
+      "path": "/redesign/images/variety-box-100.webp",
+      "width": 834,
+      "height": 927,
+      "bytes": 121692,
+      "sha256": "136fdff9c6d57af1d0b6b8996c152c3c70df43cbb1ab5d2aa50967be2e33c583"
+    }
+  ],
+  "notes": [
+    "50 Pack Variety Box is identified in /shop/. Its detail page returned HTTP 503; the demo only uses the public catalog name and existing authorized image.",
+    "Contact page shows (255) 352-6258 while the shared footer shows a different Spanish number. The address mixes Lleida and Madrid with placeholder wording. Owner confirmation is required; no address or phone is incorporated.",
+    "A sales email is published but not included as a seller contact in this noncommercial demo. The contact form only simulates a message locally.",
+    "About copy paraphrases the public educational mission, transparency and community content. It makes no claims about ownership, founding dates, certified quality, health or efficacy.",
+    "FAQ selects noncommercial concepts from /faq/ and the About page questions; purchase guidance and unverifiable commercial/legal claims are omitted.",
+    "Product titles are normalized to names and pack labels. No potency, composition, effects, stock, prices or availability are asserted. Photo palette descriptions are visual observations, not technical specifications.",
+    "No new assets replaced files used by /original/. The new high-resolution files live in public/redesign/images/."
+  ]
+}

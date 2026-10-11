@@ -1,0 +1,26 @@
+/* Local tokens for the Chromatic Underground system. No global :root changes. */
+.chromatic-page.cu-v2 {
+  --cu-bg: #08090c;
+  --cu-panel: #101116;
+  --cu-text: #f2f0f7;
+  --cu-muted: #b1acbf;
+  --cu-line: #ffffff1c;
+  --cu-violet: #ad8cff;
+  --cu-magenta: #f281ca;
+  --cu-cyan: #80deec;
+  --cu-orange: #ffae79;
+  --cu-acid: #c6ee83;
+  --cu-display: "CU Grotesk", Arial, sans-serif;
+  --cu-body: "Open Sans", Arial, sans-serif;
+  --cu-radius-sm: 8px;
+  --cu-radius-md: 16px;
+  --cu-radius-lg: 24px;
+  --cu-shadow: 0 20px 70px #0005;
+  --cu-glass: #111119d9;
+  --cu-section-space: clamp(64px, 8vw, 120px);
+  --cu-page-width: 1320px;
+  --scene-violet: 1;
+  --scene-magenta: 0.48;
+  --scene-cyan: 0.1;
+  --scene-orange: 0.04;
+}
