@@ -54,7 +54,7 @@ for (const route of ["/original", "/redesign"]) {
           const a = link as HTMLAnchorElement;
           return (
             a.origin === location.origin &&
-            !/shop|checkout|cart|product|wa\.me|mailto:|tel:/.test(a.href)
+            !/checkout|cart|\/product\/|wa\.me|mailto:|tel:/.test(a.href)
           );
         }),
       ),
@@ -62,14 +62,22 @@ for (const route of ["/original", "/redesign"]) {
     await expect(
       page.locator('form, input[type="number"], input[type="email"]'),
     ).toHaveCount(0);
-    const disclosure = page
-      .locator("summary")
-      .filter({ hasText: "¿Es la web oficial de Packman?" });
+    const disclosure = page.locator("summary").filter({
+      hasText:
+        route === "/original"
+          ? "¿Es la web oficial de Packman?"
+          : "¿Cuál es nuestro objetivo principal?",
+    });
     await disclosure.click();
     await expect(
-      page.getByText("No. Es un estudio visual independiente", {
-        exact: false,
-      }),
+      page.getByText(
+        route === "/original"
+          ? "No. Es un estudio visual independiente"
+          : "Nuestro objetivo es ofrecer información clara y recursos educativos",
+        {
+          exact: false,
+        },
+      ),
     ).toBeVisible();
     await page.evaluate(() => window.scrollTo(0, 0));
     const menu = page.getByRole("button", { name: /^(Abrir|Cerrar) menú$/ });
@@ -81,9 +89,21 @@ for (const route of ["/original", "/redesign"]) {
       await expect(menu).toBeFocused();
       await menu.click();
     }
-    const galleryLink = page.locator('.site-navigation a[href="#galeria"]');
+    const galleryLink =
+      route === "/original"
+        ? page.locator('.site-navigation a[href="#galeria"]')
+        : page
+            .getByRole("navigation", {
+              name: "Navegación principal",
+              exact: true,
+            })
+            .getByRole("link", { name: "Shop", exact: true });
     await galleryLink.click();
-    await expect(page).toHaveURL(`${baseURL}${route}#galeria`);
+    await expect(page).toHaveURL(
+      route === "/original"
+        ? `${baseURL}${route}#galeria`
+        : `${baseURL}/redesign/shop`,
+    );
     if (await menu.isVisible())
       await expect(menu).toHaveAttribute("aria-expanded", "false");
     expect(errors).toEqual([]);
@@ -101,14 +121,18 @@ test("rediseño: los filtros cambian la galería y anuncian los resultados", asy
 }) => {
   await page.goto("/redesign");
   await expect(page.locator(".visual-card")).toHaveCount(8);
-  await page.getByRole("button", { name: "Packaging", exact: true }).click();
+  await page
+    .getByRole("button", { name: "packman 2g disposable", exact: true })
+    .click();
   await expect(page.locator(".visual-card")).toHaveCount(3);
-  await expect(page.getByRole("status")).toHaveText("3 referencias visuales");
+  await expect(page.getByRole("status")).toHaveText("3 referencias");
   await expect(
-    page.getByRole("button", { name: "Packaging", exact: true }),
+    page.getByRole("button", { name: "packman 2g disposable", exact: true }),
   ).toHaveAttribute("aria-pressed", "true");
-  await page.getByRole("button", { name: "Gráfica", exact: true }).click();
-  await expect(page.locator(".visual-card")).toHaveCount(5);
+  await page
+    .getByRole("button", { name: "Packman Live Resin", exact: true })
+    .click();
+  await expect(page.locator(".visual-card")).toHaveCount(4);
   await page.getByRole("button", { name: "Todo" }).click();
   await expect(page.locator(".visual-card")).toHaveCount(8);
 });
@@ -126,9 +150,7 @@ test("selector: navegación entre versiones y preferencia de movimiento reducido
     .click();
   await expect(page).toHaveURL(/\/redesign$/);
   await expect(
-    page
-      .getByRole("navigation", { name: "Versiones", exact: true })
-      .getByRole("link", { name: "Rediseño" }),
+    page.locator('#chromatic-navigation a[href="/redesign"]'),
   ).toHaveAttribute("aria-current", "page");
   expect(
     await page.evaluate(
