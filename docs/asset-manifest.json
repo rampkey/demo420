@@ -1,0 +1,142 @@
+[
+  {
+    "url": "https://packmanvape.es/wp-content/uploads/2026/06/Pack-Man-Disposable-Box-300x300.webp",
+    "file": "Pack-Man-Disposable-Box-300x300.webp",
+    "sha256": "b93c4254144d87d583c4c9583975f756ed7fadb0d9452c0fa28b5ef8729700d0",
+    "bytes": 36040,
+    "local_path": "public/reference/box-100.webp",
+    "width": 300,
+    "height": 300,
+    "permission": "User confirmed permission for this demo on 2026-10-11"
+  },
+  {
+    "url": "https://packmanvape.es/wp-content/uploads/2026/06/Pack-Man-vapes-Box-300x300.webp",
+    "file": "Pack-Man-vapes-Box-300x300.webp",
+    "sha256": "15b6dfc4fae36c9c2ae144cec76896a9f649b026eae618987ccab06381368563",
+    "bytes": 37952,
+    "local_path": "public/reference/box-10.webp",
+    "width": 300,
+    "height": 300,
+    "permission": "User confirmed permission for this demo on 2026-10-11"
+  },
+  {
+    "url": "https://packmanvape.es/wp-content/uploads/2026/06/pack-man-vape-boxs-300x300.webp",
+    "file": "pack-man-vape-boxs-300x300.webp",
+    "sha256": "25f1cc4ec82e4713b098bf6495fc6baae62c0bcbbdd29ede89db8f44184eac15",
+    "bytes": 33644,
+    "local_path": "public/reference/box-50.webp",
+    "width": 300,
+    "height": 300,
+    "permission": "User confirmed permission for this demo on 2026-10-11"
+  },
+  {
+    "url": "https://packmanvape.es/wp-content/uploads/2026/06/packman-2000mg-THC.webp",
+    "file": "packman-2000mg-THC.webp",
+    "sha256": "e7e27da64061459450f0e939c3602911eedc01d05e98af52fd3b3df000074771",
+    "bytes": 96034,
+    "local_path": "public/reference/about.webp",
+    "width": 1024,
+    "height": 985,
+    "permission": "User confirmed permission for this demo on 2026-10-11"
+  },
+  {
+    "url": "https://packmanvape.es/wp-content/uploads/2026/06/packman-berry-payton-1-300x300.webp",
+    "file": "packman-berry-payton-1-300x300.webp",
+    "sha256": "4adadc8fea29ec749c0006cb2c31baffaec50e8d2de9cb0223faf03312355e07",
+    "bytes": 11934,
+    "local_path": "public/reference/berry.webp",
+    "width": 300,
+    "height": 300,
+    "permission": "User confirmed permission for this demo on 2026-10-11"
+  },
+  {
+    "url": "https://packmanvape.es/wp-content/uploads/2026/06/packman-cereal-skunk-300x300.webp",
+    "file": "packman-cereal-skunk-300x300.webp",
+    "sha256": "a70495d006548e4c3883d9d22a670cfebe7caa590d0420e192463754fec4e1d4",
+    "bytes": 12790,
+    "local_path": "public/reference/cereal.webp",
+    "width": 300,
+    "height": 300,
+    "permission": "User confirmed permission for this demo on 2026-10-11"
+  },
+  {
+    "url": "https://packmanvape.es/wp-content/uploads/2026/06/packman-granddaddy-urkle-1-300x300.webp",
+    "file": "packman-granddaddy-urkle-1-300x300.webp",
+    "sha256": "da94c76265b29e0ecb7bfcf59d6aa25ed329110ee4f5dae9834ee2601f4eac50",
+    "bytes": 10606,
+    "local_path": "public/reference/granddaddy.webp",
+    "width": 300,
+    "height": 300,
+    "permission": "User confirmed permission for this demo on 2026-10-11"
+  },
+  {
+    "url": "https://packmanvape.es/wp-content/uploads/2026/06/packman-mango-tango-kaufens-300x300.webp",
+    "file": "packman-mango-tango-kaufens-300x300.webp",
+    "sha256": "9f16c207bb8be4db8270b27746e9c7d7caabc3916b67f0963bc47b6601e2a481",
+    "bytes": 14842,
+    "local_path": "public/reference/mango.webp",
+    "width": 300,
+    "height": 300,
+    "permission": "User confirmed permission for this demo on 2026-10-11"
+  },
+  {
+    "url": "https://packmanvape.es/wp-content/uploads/2026/06/packman-mystery-og-300x300.webp",
+    "file": "packman-mystery-og-300x300.webp",
+    "sha256": "19b82369b83035ac4ba722e77bfcaa8c485df3f7867c023d5774d3643903b74c",
+    "bytes": 9844,
+    "local_path": "public/reference/mystery.webp",
+    "width": 300,
+    "height": 300,
+    "permission": "User confirmed permission for this demo on 2026-10-11"
+  },
+  {
+    "url": "https://packmanvape.es/wp-content/uploads/2026/07/packman-thc-vape.webp",
+    "file": "packman-thc-vape.webp",
+    "sha256": "680c4bf2db4e5b4151aa3bbd9c5e24ca57764c0a4bfb66b17661551b42070f76",
+    "bytes": 140462,
+    "local_path": "public/reference/panorama.webp",
+    "width": 2048,
+    "height": 2048,
+    "permission": "User confirmed permission for this demo on 2026-10-11"
+  },
+  {
+    "url": "https://packmanvape.es/wp-content/uploads/2026/07/packman-vapes.webp",
+    "file": "packman-vapes.webp",
+    "sha256": "3145990c811cae9f3ef672a9784e4daee5c557c23fcd99e96dbb2617015e9c4a",
+    "bytes": 38060,
+    "local_path": "public/reference/features.webp",
+    "width": 1920,
+    "height": 1280,
+    "permission": "User confirmed permission for this demo on 2026-10-11"
+  },
+  {
+    "url": "https://packmanvape.es/wp-content/uploads/2026/08/Packman-Vape-Pens-.webp",
+    "file": "Packman-Vape-Pens-.webp",
+    "sha256": "51eecd6137cff551c9d4a02b460ba78de2227904520800006c7e49d8681a9a7e",
+    "bytes": 19912,
+    "local_path": "public/reference/footer.webp",
+    "width": 539,
+    "height": 569,
+    "permission": "User confirmed permission for this demo on 2026-10-11"
+  },
+  {
+    "url": "https://packmanvape.es/wp-content/uploads/2026/08/cropped-Packman-Vape-Pens-.webp",
+    "file": "cropped-Packman-Vape-Pens-.webp",
+    "sha256": "523edb3ddbe19156a9485b905527b77b30801134b3f2475b0a1787db4dae52b7",
+    "bytes": 21166,
+    "local_path": "public/reference/logo.webp",
+    "width": 512,
+    "height": 512,
+    "permission": "User confirmed permission for this demo on 2026-10-11"
+  },
+  {
+    "url": "https://packmanvape.es/wp-content/uploads/2026/08/vape-thc.webp",
+    "file": "vape-thc.webp",
+    "sha256": "ceadd3ea76f488d227aac0ab1ae50f2d44d45df6fddf6397cf455678d2a8d064",
+    "bytes": 494164,
+    "local_path": "public/reference/hero.webp",
+    "width": 2000,
+    "height": 2000,
+    "permission": "User confirmed permission for this demo on 2026-10-11"
+  }
+]
