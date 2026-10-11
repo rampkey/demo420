@@ -1,0 +1,1751 @@
+@font-face {
+  font-family: "CU Grotesk";
+  src: url("/redesign/fonts/space-grotesk.ttf") format("truetype");
+  font-weight: 300 700;
+  font-display: swap;
+}
+/* Every selector is scoped to /redesign. Shared styles and /original stay intact. */
+.chromatic-page {
+  --cu-bg: #08090c;
+  --cu-panel: #101116;
+  --cu-line: #ffffff17;
+  --cu-text: #f2f0f7;
+  --cu-muted: #a1a2b4;
+  --cu-violet: #aa8dff;
+  --cu-cyan: #81dff1;
+  background: var(--cu-bg);
+  color: var(--cu-text);
+  font-family: "Open Sans", Arial, sans-serif;
+  overflow: clip;
+  isolation: isolate;
+}
+.chromatic-page h1,
+.chromatic-page h2,
+.chromatic-page h3 {
+  font-family: "CU Grotesk", Arial, sans-serif;
+}
+.chromatic-page a:focus-visible,
+.chromatic-page button:focus-visible,
+.chromatic-page summary:focus-visible {
+  outline-color: #b3a1ff;
+  outline-offset: 6px;
+}
+.chromatic-page ::selection {
+  background: #aa8dff;
+  color: #08090c;
+}
+.chromatic-page .cu-container {
+  width: 90%;
+  max-width: 1320px;
+  margin-inline: auto;
+}
+.chromatic-page .demo-bar {
+  background: #08090c;
+  border-bottom: 1px solid var(--cu-line);
+  min-height: 37px;
+}
+.chromatic-page .demo-bar nav a[aria-current="page"] {
+  color: #ccbfff;
+}
+.chromatic-page .demo-indicator {
+  background: #bd9bff;
+}
+.chromatic-page .cu-header {
+  position: relative;
+  z-index: 40;
+  padding: 20px 0 0;
+  background: var(--cu-bg);
+}
+.chromatic-page .cu-nav-shell {
+  width: 90%;
+  max-width: 1320px;
+  margin: auto;
+  min-height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  padding: 10px 26px;
+  background: linear-gradient(110deg, #ffffff09, #ffffff03);
+  border: 1px solid #ffffff1c;
+  border-radius: 16px;
+  backdrop-filter: blur(20px);
+}
+.chromatic-page .cu-brand {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex-shrink: 0;
+}
+.chromatic-page .cu-brand .brand-logo {
+  width: 47px;
+  height: 47px;
+}
+.chromatic-page .cu-brand > span {
+  font-family: "CU Grotesk", Arial, sans-serif;
+  font-size: 8px;
+  letter-spacing: 0.17em;
+  line-height: 1.7;
+  color: #b5b2c7;
+}
+.chromatic-page .cu-brand b {
+  font-weight: 500;
+  color: #e5e2ef;
+}
+.chromatic-page .cu-navigation {
+  position: static;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 30px;
+  background: transparent;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  color: #bfbecb;
+  font-size: 11px;
+}
+.chromatic-page .cu-navigation a:hover {
+  color: white;
+}
+.chromatic-page .cu-nav-reference {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  font-size: 10px;
+  color: #e9e5f4;
+  border: 1px solid #ffffff30;
+  background: #ffffff04;
+  padding: 12px 16px;
+  border-radius: 8px;
+  transition:
+    background 0.2s,
+    border-color 0.2s;
+}
+.chromatic-page .cu-nav-reference:hover {
+  background: #aa8dff17;
+  border-color: #aa8dff80;
+}
+.chromatic-page .cu-nav-reference svg {
+  width: 15px;
+  height: 15px;
+}
+.chromatic-page .cu-menu-toggle {
+  display: none;
+}
+.chromatic-page .cu-kicker {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: #b4b2c6;
+  font-size: 9px;
+  line-height: 1.6;
+  letter-spacing: 0.17em;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.chromatic-page .cu-kicker > i {
+  height: 6px;
+  width: 6px;
+  border-radius: 50%;
+  background: #ceff91;
+  box-shadow: 0 0 10px #ceff9155;
+}
+.chromatic-page .cu-hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  min-height: 720px;
+  padding-top: 50px;
+  padding-bottom: 55px;
+  position: relative;
+}
+.chromatic-page .cu-hero-copy {
+  padding: 36px 0 0;
+  position: relative;
+  z-index: 3;
+}
+.chromatic-page .cu-hero h1 {
+  font-size: clamp(66px, 6.4vw, 96px);
+  line-height: 0.98;
+  letter-spacing: -0.065em;
+  font-weight: 600;
+  margin: 32px 0 28px;
+}
+.chromatic-page .cu-hero h1 > span {
+  display: block;
+  background: linear-gradient(100deg, #c6bbff 5%, #b390fa 38%, #f397c7 85%);
+  background-clip: text;
+  color: transparent;
+  padding-bottom: 0.12em;
+}
+.chromatic-page .cu-hero-description {
+  font-size: 14px;
+  color: var(--cu-muted);
+  line-height: 1.9;
+}
+.chromatic-page .cu-hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+  flex-wrap: wrap;
+  margin-top: 32px;
+}
+.chromatic-page .cu-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  padding: 17px 22px;
+  font-size: 11px;
+  font-weight: 600;
+  border-radius: 9px;
+  transition:
+    transform 0.22s,
+    box-shadow 0.22s;
+  background: linear-gradient(120deg, #e2dbfb, #d5c6fa 50%, #dab9e6);
+  color: #15121e;
+  position: relative;
+}
+.chromatic-page .cu-button svg {
+  height: 17px;
+  width: 17px;
+  transition: transform 0.2s;
+}
+.chromatic-page .cu-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 7px 28px #9b67ff30;
+}
+.chromatic-page .cu-button:hover svg {
+  transform: translateX(3px);
+}
+.chromatic-page .cu-quiet-link {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  font-size: 10px;
+  color: #b8b5ca;
+  padding: 15px 0;
+}
+.chromatic-page .cu-quiet-link > span {
+  font-size: 18px;
+  color: #e5dcff;
+}
+.chromatic-page .cu-hero-edition {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  border-top: 1px solid var(--cu-line);
+  padding-top: 22px;
+  margin-top: 68px;
+  font-size: 8px;
+  letter-spacing: 0.1em;
+  color: #9b9aab;
+}
+.chromatic-page .cu-stage {
+  position: relative;
+  min-height: 610px;
+  background: #08090c;
+  border: 1px solid #ffffff13;
+  border-radius: 22px;
+  overflow: hidden;
+  perspective: 1100px;
+  transform: perspective(1100px) rotateX(var(--tilt-x, 0deg))
+    rotateY(var(--tilt-y, 0deg));
+  transition: transform 0.35s ease-out;
+  isolation: isolate;
+}
+.chromatic-page .cu-stage-atmosphere {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 70% 25%, #661ecc40, transparent 60%),
+    radial-gradient(ellipse at 20% 80%, #1b87b830, transparent 50%);
+  z-index: 2;
+  pointer-events: none;
+}
+.chromatic-page .cu-stage-photo {
+  position: absolute;
+  inset: -18% -30% -8%;
+  z-index: 1;
+  mix-blend-mode: screen;
+}
+.chromatic-page .cu-stage-photo > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.chromatic-page .cu-stage-top {
+  position: absolute;
+  top: 26px;
+  left: 26px;
+  right: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 4;
+  font-size: 8px;
+  letter-spacing: 0.15em;
+  color: #b9b2d0;
+}
+.chromatic-page .cu-stage-top > span {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+.chromatic-page .cu-stage-top i {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #ae8aff;
+}
+.chromatic-page .cu-stage-top svg {
+  width: 23px;
+  height: 23px;
+  color: #ddccff;
+}
+.chromatic-page .cu-chrome-ring {
+  position: absolute;
+  z-index: 3;
+  width: 75%;
+  height: 29%;
+  left: 12%;
+  top: 43%;
+  border: 13px solid transparent;
+  border-radius: 50%;
+  background: conic-gradient(
+    from 45deg,
+    #1a162e,
+    #e2d7ff 10%,
+    #876baf 20%,
+    #f7f3ff 25%,
+    #434f66 35%,
+    #a9edfb 43%,
+    #1a162e 52%,
+    #b377ac 65%,
+    #f4c2e6 72%,
+    #717990 82%,
+    #ebe5ff 92%,
+    #1a162e
+  );
+  mask:
+    linear-gradient(#fff 0 0) padding-box,
+    linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  transform: rotate(-28deg);
+  filter: drop-shadow(0 0 12px #9e75ff30);
+  pointer-events: none;
+}
+.chromatic-page .cu-stage-coordinate {
+  position: absolute;
+  left: 20px;
+  top: 38%;
+  writing-mode: vertical-rl;
+  font-size: 7px;
+  letter-spacing: 0.16em;
+  color: #a7a0b8;
+  z-index: 4;
+}
+.chromatic-page .cu-floating-label {
+  position: absolute;
+  right: 22px;
+  bottom: 75px;
+  z-index: 4;
+  padding: 18px 21px;
+  background: linear-gradient(130deg, #ffffff16, #ffffff06);
+  border: 1px solid #ffffff26;
+  border-radius: 12px;
+  backdrop-filter: blur(18px);
+  max-width: 70%;
+}
+.chromatic-page .cu-floating-label > span {
+  font-size: 7px;
+  letter-spacing: 0.16em;
+  color: #b9b2ce;
+  display: block;
+  margin-bottom: 9px;
+}
+.chromatic-page .cu-floating-label strong {
+  font-family: "CU Grotesk", Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: -0.04em;
+}
+.chromatic-page .cu-floating-label > div {
+  display: flex;
+  gap: 6px;
+  margin-top: 16px;
+}
+.chromatic-page .cu-floating-label i {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #ad8cff;
+}
+.chromatic-page .cu-floating-label i:nth-child(2) {
+  background: #ff89c4;
+}
+.chromatic-page .cu-floating-label i:nth-child(3) {
+  background: #82e6f2;
+}
+.chromatic-page .cu-floating-label i:nth-child(4) {
+  background: #ff9d65;
+}
+.chromatic-page .cu-floating-label i:nth-child(5) {
+  background: #c7f98a;
+}
+.chromatic-page .cu-stage-bottom {
+  position: absolute;
+  bottom: 22px;
+  left: 26px;
+  right: 26px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 4;
+  font-size: 7px;
+  letter-spacing: 0.16em;
+  color: #aaa3be;
+}
+.chromatic-page .cu-stage-bottom > span:last-child {
+  font-size: 25px;
+  color: #ded4f2;
+}
+.chromatic-page .cu-strip {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 18px;
+  background: linear-gradient(110deg, #ae97dd0c, #e485c916, #5bbdc70d);
+  border-block: 1px solid #ac91ce26;
+  padding: 24px 4%;
+  font-family: "CU Grotesk", Arial, sans-serif;
+  font-size: 20px;
+  letter-spacing: 0.07em;
+  color: #d9d2e9;
+}
+.chromatic-page .cu-strip svg {
+  font-size: 23px;
+  color: #c4a5ee;
+  font-weight: 400;
+}
+.chromatic-page h2 {
+  font-size: clamp(40px, 4.2vw, 64px);
+  line-height: 1.04;
+  letter-spacing: -0.055em;
+  font-weight: 500;
+}
+.chromatic-page h2 span {
+  color: #a7a1b4;
+}
+.chromatic-page .cu-manifesto {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 10%;
+  padding-block: 110px;
+}
+.chromatic-page .cu-manifesto h2 {
+  margin-top: 26px;
+}
+.chromatic-page .cu-manifesto-copy {
+  padding-top: 45px;
+}
+.chromatic-page .cu-manifesto-copy > p:first-child {
+  font-family: "CU Grotesk", Arial, sans-serif;
+  font-size: 23px;
+  line-height: 1.5;
+  color: #ddd8e8;
+  letter-spacing: -0.025em;
+  margin-bottom: 22px;
+}
+.chromatic-page .cu-manifesto-copy > p:nth-child(2) {
+  font-size: 13px;
+  line-height: 1.9;
+  color: var(--cu-muted);
+  max-width: 420px;
+}
+.chromatic-page .cu-spectrum {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: 30px;
+}
+.chromatic-page .cu-spectrum > span {
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  background: linear-gradient(130deg, #dbc7ff, #a47bed);
+  box-shadow: inset 0 0 0 1px #ffffff25;
+}
+.chromatic-page .cu-spectrum > span:nth-child(2) {
+  background: linear-gradient(130deg, #ffb9df, #e778ae);
+}
+.chromatic-page .cu-spectrum > span:nth-child(3) {
+  background: linear-gradient(130deg, #bdf3ff, #57bddc);
+}
+.chromatic-page .cu-spectrum > span:nth-child(4) {
+  background: linear-gradient(130deg, #ffc594, #e67c45);
+}
+.chromatic-page .cu-spectrum > span:nth-child(5) {
+  background: linear-gradient(130deg, #e3ffb5, #a4cc61);
+}
+.chromatic-page .cu-spectrum > div {
+  font-size: 7px;
+  letter-spacing: 0.08em;
+  color: #a5a0b4;
+  line-height: 1.5;
+  margin-left: 12px;
+}
+.chromatic-page .cu-editorial {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 18px;
+  margin-bottom: 110px;
+}
+.chromatic-page .cu-editorial-art {
+  position: relative;
+  overflow: hidden;
+  min-height: 570px;
+  border-radius: 16px;
+  border: 1px solid #ffffff20;
+  background: #221324;
+}
+.chromatic-page .cu-editorial-art > img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  object-fit: cover;
+  filter: brightness(0.8) saturate(0.8);
+  transition: transform 0.8s;
+}
+.chromatic-page .cu-editorial-art:hover > img {
+  transform: scale(1.025);
+}
+.chromatic-page .cu-editorial-overlay {
+  position: absolute;
+  inset: 0;
+  padding: 30px;
+  background: linear-gradient(180deg, #0006, transparent 35%, #08090cd9);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.chromatic-page .cu-editorial-overlay > span {
+  font-size: 8px;
+  letter-spacing: 0.16em;
+  color: #eee9f5;
+}
+.chromatic-page .cu-editorial-overlay > strong {
+  margin-top: auto;
+  margin-bottom: 18px;
+  font-family: "CU Grotesk", Arial, sans-serif;
+  font-size: 50px;
+  line-height: 1.1;
+  font-weight: 500;
+  letter-spacing: -0.045em;
+  max-width: 300px;
+}
+.chromatic-page .cu-editorial-side {
+  padding: 45px;
+  background: linear-gradient(145deg, #191521, #101115);
+  border: 1px solid #ffffff15;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+.chromatic-page .cu-editorial-side h2 {
+  font-size: 44px;
+  line-height: 1.1;
+  margin: 30px 0 25px;
+}
+.chromatic-page .cu-editorial-side > p:not(.cu-kicker) {
+  font-size: 13px;
+  line-height: 1.9;
+  color: var(--cu-muted);
+  max-width: 310px;
+}
+.chromatic-page .cu-editorial-stat {
+  display: flex;
+  gap: 22px;
+  align-items: center;
+  margin-top: auto;
+  padding-top: 35px;
+}
+.chromatic-page .cu-editorial-stat > strong {
+  font-family: "CU Grotesk", Arial, sans-serif;
+  font-size: 68px;
+  line-height: 1;
+  font-weight: 400;
+  background: linear-gradient(135deg, #f0e9ff, #877495);
+  color: transparent;
+  background-clip: text;
+}
+.chromatic-page .cu-editorial-stat > div {
+  font-size: 8px;
+  line-height: 1.8;
+  letter-spacing: 0.1em;
+  color: #aba5b9;
+}
+.chromatic-page .cu-text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 28px;
+  font-size: 11px;
+  border-bottom: 1px solid #b0a0cb4a;
+  padding: 14px 0;
+  margin-top: 20px;
+  color: #dacef0;
+}
+.chromatic-page .cu-text-link svg {
+  width: 16px;
+  height: 16px;
+}
+.chromatic-page .cu-gallery-section {
+  padding: 85px 0;
+  background: linear-gradient(180deg, #101014, #0b0b10);
+  border-block: 1px solid var(--cu-line);
+}
+.chromatic-page .cu-section-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 40px;
+  margin-bottom: 42px;
+}
+.chromatic-page .cu-section-heading h2 {
+  margin-top: 25px;
+}
+.chromatic-page .cu-section-heading > p {
+  font-size: 12px;
+  line-height: 1.95;
+  color: var(--cu-muted);
+  max-width: 330px;
+}
+.chromatic-page .cu-section-heading > p > span {
+  display: inline-block;
+  color: #d8c6f1;
+  margin-top: 14px;
+  font-size: 10px;
+}
+.chromatic-page .cu-gallery-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 25px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid var(--cu-line);
+  gap: 20px;
+}
+.chromatic-page .cu-filters {
+  display: flex;
+  gap: 7px;
+  padding: 5px;
+  background: #ffffff04;
+  border: 1px solid #ffffff16;
+  border-radius: 10px;
+}
+.chromatic-page .cu-filters button {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 10px;
+  color: #a9a4b6;
+  border: 1px solid transparent;
+  border-radius: 7px;
+  background: transparent;
+  padding: 10px 17px;
+  transition:
+    background 0.2s,
+    color 0.2s;
+}
+.chromatic-page .cu-filters button > span {
+  font-size: 8px;
+  opacity: 0.65;
+}
+.chromatic-page .cu-filters button[aria-pressed="true"] {
+  background: #e7def5;
+  color: #17121d;
+  border-color: #ffffff25;
+  box-shadow: 0 2px 10px #0003;
+}
+.chromatic-page .cu-filters button:hover:not([aria-pressed="true"]) {
+  background: #ffffff0a;
+  color: white;
+}
+.chromatic-page .cu-gallery-toolbar > p {
+  color: #a6a1b4;
+  font-size: 9px;
+}
+.chromatic-page .cu-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+.chromatic-page .cu-card {
+  background: linear-gradient(150deg, #1a1820, #111217);
+  border: 1px solid #ffffff16;
+  border-radius: 13px;
+  overflow: hidden;
+  position: relative;
+  transition:
+    transform 0.3s,
+    border-color 0.3s,
+    box-shadow 0.3s;
+  animation: cu-card-in 0.4s ease both;
+}
+.chromatic-page .cu-card:hover {
+  transform: translateY(-5px);
+  border-color: color-mix(in srgb, var(--variant) 55%, transparent);
+  box-shadow: 0 10px 45px #0005;
+}
+.chromatic-page .cu-card-top {
+  padding: 18px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 8px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #b4aebe;
+}
+.chromatic-page .cu-card-top svg {
+  color: var(--variant);
+  width: 16px;
+  height: 16px;
+}
+.chromatic-page .cu-card-art {
+  height: 250px;
+  margin: 0 14px;
+  position: relative;
+  background: radial-gradient(
+    ellipse at 50% 50%,
+    color-mix(in srgb, var(--variant) 20%, #e8e6e9) 10%,
+    #cac7d180
+  );
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.chromatic-page .cu-card-art > img {
+  position: relative;
+  z-index: 2;
+  mix-blend-mode: multiply;
+  width: 91%;
+  height: 91%;
+  object-fit: contain;
+  transition: transform 0.45s;
+}
+.chromatic-page .cu-card:hover .cu-card-art > img {
+  transform: translateY(-4px) rotate(-2deg) scale(1.025);
+}
+.chromatic-page .cu-card-halo {
+  position: absolute;
+  inset: 10%;
+  background: var(--variant);
+  opacity: 0.2;
+  filter: blur(30px);
+  border-radius: 50%;
+}
+.chromatic-page .cu-card-orbit {
+  position: absolute;
+  z-index: 1;
+  width: 88%;
+  height: 24%;
+  border: 1px solid #fff7;
+  border-radius: 50%;
+  bottom: 13%;
+  transform: rotate(-12deg);
+}
+.chromatic-page .cu-card-caption {
+  padding: 22px 20px 18px;
+}
+.chromatic-page .cu-card-caption > p {
+  color: var(--variant);
+  font-size: 6px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  margin-bottom: 10px;
+}
+.chromatic-page .cu-card-caption h3 {
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: -0.045em;
+  line-height: 1.25;
+  margin-bottom: 9px;
+}
+.chromatic-page .cu-card-caption > span {
+  font-size: 10px;
+  line-height: 1.8;
+  color: #a29bac;
+  display: block;
+  min-height: 36px;
+}
+.chromatic-page .cu-card-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 20px;
+  border-top: 1px solid #ffffff0c;
+  font-size: 6px;
+  letter-spacing: 0.13em;
+  color: #a49baf;
+}
+.chromatic-page .cu-card-bottom i {
+  width: 6px;
+  height: 6px;
+  background: var(--variant);
+  border-radius: 50%;
+  box-shadow: 0 0 10px color-mix(in srgb, var(--variant) 40%, transparent);
+}
+.chromatic-page .cu-gallery-note {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-top: 1px solid var(--cu-line);
+  margin-top: 30px;
+  padding-top: 25px;
+  font-size: 9px;
+  color: #a29bad;
+}
+.chromatic-page .cu-gallery-note > svg {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+  color: #b59dd5;
+}
+.chromatic-page .cu-gallery-note > span {
+  margin-left: auto;
+  font-size: 7px;
+  letter-spacing: 0.13em;
+}
+.chromatic-page .cu-principles {
+  padding-block: 100px;
+}
+.chromatic-page .cu-principles-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+.chromatic-page .cu-principles-grid > article {
+  padding: 30px;
+  background: linear-gradient(150deg, #ffffff05, #ffffff01);
+  border: 1px solid var(--cu-line);
+  border-radius: 12px;
+  position: relative;
+  overflow: hidden;
+  transition: border-color 0.3s;
+}
+.chromatic-page .cu-principles-grid > article:hover {
+  border-color: #b48deb60;
+}
+.chromatic-page .cu-principles-grid > article > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 55px;
+}
+.chromatic-page .cu-principles-grid > article > div > span {
+  font-size: 9px;
+  color: #a7a0b6;
+}
+.chromatic-page .cu-principles-grid svg {
+  width: 29px;
+  height: 29px;
+  color: #bca0dd;
+}
+.chromatic-page .cu-principles-grid > article:nth-child(2) svg {
+  color: #80cfdf;
+}
+.chromatic-page .cu-principles-grid > article:nth-child(3) svg {
+  color: #f2a479;
+}
+.chromatic-page .cu-principles-grid h3 {
+  font-size: 22px;
+  line-height: 1.25;
+  letter-spacing: -0.03em;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+.chromatic-page .cu-principles-grid p {
+  font-size: 12px;
+  line-height: 1.9;
+  color: var(--cu-muted);
+  max-width: 320px;
+}
+.chromatic-page .cu-statement {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  border: 1px solid #ad89dc30;
+  background: #17131e;
+  border-radius: 20px;
+  padding: 65px;
+  margin-bottom: 100px;
+}
+.chromatic-page .cu-statement-aura {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(ellipse at 85% 70%, #4140a64d, transparent 55%),
+    radial-gradient(ellipse at 15% 0%, #a4429b30, transparent 60%);
+}
+.chromatic-page .cu-statement h2 {
+  font-size: clamp(50px, 6.5vw, 96px);
+  line-height: 1.03;
+  margin: 25px 0 35px;
+  position: relative;
+  z-index: 1;
+}
+.chromatic-page .cu-statement h2 > span {
+  background: linear-gradient(110deg, #bfb5ff, #eed4ec 35%, #83d7f0);
+  background-clip: text;
+  color: transparent;
+}
+.chromatic-page .cu-statement-mark {
+  position: absolute;
+  right: 30px;
+  top: 40px;
+  font-family: Arial, sans-serif;
+  font-size: 310px;
+  line-height: 1;
+  color: #c1a1ff20;
+  transform: rotate(-10deg);
+}
+.chromatic-page .cu-statement-bottom {
+  border-top: 1px solid var(--cu-line);
+  margin-top: 55px;
+  padding-top: 25px;
+  font-size: 7px;
+  letter-spacing: 0.15em;
+  color: #b1a0bd;
+}
+.chromatic-page .cu-faq {
+  padding-bottom: 110px;
+  display: grid;
+  grid-template-columns: 1fr 1.25fr;
+  gap: 8%;
+}
+.chromatic-page .cu-faq h2 {
+  margin: 25px 0;
+}
+.chromatic-page .cu-faq > div > p:not(.cu-kicker) {
+  font-size: 12px;
+  line-height: 1.9;
+  color: var(--cu-muted);
+}
+.chromatic-page .faq-list {
+  border-top: 1px solid var(--cu-line);
+}
+.chromatic-page .faq-list details {
+  border-color: var(--cu-line);
+  transition: background 0.2s;
+}
+.chromatic-page .faq-list details[open] {
+  background: #ffffff03;
+}
+.chromatic-page .faq-list summary {
+  font-family: "CU Grotesk", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: -0.015em;
+  padding: 26px 18px;
+  gap: 20px;
+  color: #ded7e9;
+}
+.chromatic-page .faq-plus {
+  color: #baa1db;
+  border: 1px solid #bba4db33;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 18px;
+}
+.chromatic-page .faq-list details > p {
+  padding: 0 55px 25px 18px;
+  color: #a8a0b6;
+  font-size: 12px;
+  line-height: 1.9;
+}
+.chromatic-page .cu-footer {
+  border-top: 1px solid var(--cu-line);
+  background: linear-gradient(180deg, #0f0f14, #08090c);
+  padding: 55px 0 30px;
+}
+.chromatic-page .cu-footer-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+.chromatic-page .cu-footer-top .brand-logo {
+  width: 70px;
+  height: 70px;
+}
+.chromatic-page .cu-footer-top > p {
+  font-family: "CU Grotesk", Arial, sans-serif;
+  font-size: 19px;
+  line-height: 1.4;
+  letter-spacing: -0.03em;
+}
+.chromatic-page .cu-footer-top > p > span {
+  color: #a9a0b6;
+}
+.chromatic-page .cu-footer-top > a:last-child {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 10px;
+  color: #a99fb9;
+}
+.chromatic-page .cu-footer-top > a:last-child > span {
+  height: 38px;
+  width: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--cu-line);
+  border-radius: 50%;
+  font-size: 17px;
+  color: #dbceed;
+}
+.chromatic-page .cu-footer-word {
+  font-family: "CU Grotesk", Arial, sans-serif;
+  font-size: clamp(80px, 17vw, 250px);
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -0.065em;
+  text-align: center;
+  padding: 60px 0 50px;
+  background: linear-gradient(180deg, #97919e, #403c49);
+  background-clip: text;
+  color: transparent;
+}
+.chromatic-page .cu-footer-word > span {
+  font-size: 25px;
+  vertical-align: top;
+  letter-spacing: 0;
+}
+.chromatic-page .cu-footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px;
+  border-top: 1px solid var(--cu-line);
+  padding-top: 25px;
+  color: #a19aaf;
+  font-size: 8px;
+  line-height: 1.8;
+}
+.chromatic-page .cu-footer-bottom > span {
+  font-size: 7px;
+  letter-spacing: 0.1em;
+}
+.chromatic-page .cu-footer-bottom nav {
+  display: flex;
+  gap: 22px;
+}
+.chromatic-page .cu-footer-bottom a[aria-current="page"] {
+  color: #c5adeb;
+}
+.chromatic-page [data-motion="ready"] .cu-reveal:not([data-revealed="true"]) {
+  opacity: 0;
+  transform: translateY(24px);
+}
+.chromatic-page .cu-reveal {
+  transition:
+    opacity 0.65s ease,
+    transform 0.65s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+@keyframes cu-card-in {
+  from {
+    opacity: 0.5;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@media (max-width: 1100px) {
+  .chromatic-page .cu-nav-shell {
+    padding-inline: 20px;
+    gap: 20px;
+  }
+  .chromatic-page .cu-navigation {
+    gap: 20px;
+  }
+  .chromatic-page .cu-hero {
+    gap: 25px;
+    min-height: 630px;
+  }
+  .chromatic-page .cu-hero h1 {
+    font-size: 70px;
+  }
+  .chromatic-page .cu-stage {
+    min-height: 550px;
+  }
+  .chromatic-page .cu-hero-actions {
+    gap: 16px;
+  }
+  .chromatic-page .cu-quiet-link {
+    font-size: 9px;
+  }
+  .chromatic-page .cu-hero-edition {
+    margin-top: 45px;
+  }
+  .chromatic-page .cu-gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .chromatic-page .cu-card-art {
+    height: 310px;
+  }
+  .chromatic-page .cu-editorial-side {
+    padding: 35px;
+  }
+  .chromatic-page .cu-editorial-side h2 {
+    font-size: 38px;
+  }
+  .chromatic-page .cu-editorial-art {
+    min-height: 530px;
+  }
+  .chromatic-page .cu-strip {
+    font-size: 16px;
+  }
+  .chromatic-page .cu-manifesto-copy > p:first-child {
+    font-size: 20px;
+  }
+}
+@media (max-width: 980px) {
+  .chromatic-page .cu-menu-toggle {
+    display: flex;
+    margin-left: auto;
+    color: #dbceed;
+  }
+  .chromatic-page .cu-navigation {
+    display: none;
+    position: absolute;
+    top: calc(100% - 1px);
+    left: 5%;
+    right: 5%;
+    background: #131219f5;
+    border: 1px solid #ffffff26;
+    border-radius: 12px;
+    backdrop-filter: blur(24px);
+    padding: 12px;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    box-shadow: 0 20px 40px #0007;
+  }
+  .chromatic-page .cu-navigation.is-open {
+    display: flex;
+  }
+  .chromatic-page .cu-navigation a {
+    padding: 18px 16px;
+    border-bottom: 1px solid var(--cu-line);
+    font-size: 13px;
+  }
+  .chromatic-page .cu-navigation a:last-child {
+    border-bottom: 0;
+  }
+  .chromatic-page .cu-hero h1 {
+    font-size: 60px;
+  }
+  .chromatic-page .cu-hero {
+    padding-top: 35px;
+    gap: 20px;
+  }
+  .chromatic-page .cu-kicker {
+    font-size: 8px;
+  }
+  .chromatic-page .cu-stage {
+    min-height: 540px;
+  }
+  .chromatic-page .cu-hero-description {
+    font-size: 12px;
+  }
+  .chromatic-page .cu-hero-actions {
+    flex-direction: column;
+    align-items: start;
+    gap: 7px;
+  }
+  .chromatic-page .cu-hero-edition {
+    font-size: 6px;
+    margin-top: 30px;
+  }
+  .chromatic-page .cu-floating-label {
+    right: 14px;
+    padding: 15px;
+    bottom: 65px;
+  }
+  .chromatic-page .cu-floating-label strong {
+    font-size: 15px;
+  }
+  .chromatic-page .cu-manifesto {
+    gap: 8%;
+    padding-block: 80px;
+  }
+  .chromatic-page h2 {
+    font-size: 44px;
+  }
+  .chromatic-page .cu-editorial {
+    gap: 14px;
+    margin-bottom: 80px;
+  }
+  .chromatic-page .cu-editorial-side {
+    padding: 30px;
+  }
+  .chromatic-page .cu-editorial-side h2 {
+    font-size: 34px;
+  }
+  .chromatic-page .cu-editorial-art {
+    min-height: 500px;
+  }
+  .chromatic-page .cu-editorial-overlay > strong {
+    font-size: 42px;
+  }
+  .chromatic-page .cu-principles {
+    padding-block: 80px;
+  }
+  .chromatic-page .cu-principles-grid > article {
+    padding: 22px;
+  }
+  .chromatic-page .cu-principles-grid h3 {
+    font-size: 20px;
+  }
+  .chromatic-page .cu-faq {
+    padding-bottom: 80px;
+    gap: 6%;
+  }
+  .chromatic-page .cu-statement {
+    padding: 45px;
+    margin-bottom: 80px;
+  }
+  .chromatic-page .cu-statement-mark {
+    font-size: 240px;
+  }
+  .chromatic-page .cu-footer-bottom > span {
+    display: none;
+  }
+}
+@media (max-width: 600px) {
+  .chromatic-page .cu-container {
+    width: 89%;
+  }
+  .chromatic-page .cu-header {
+    padding-top: 13px;
+  }
+  .chromatic-page .cu-nav-shell {
+    width: 89%;
+    min-height: 69px;
+    padding: 9px 14px;
+    gap: 7px;
+    border-radius: 13px;
+  }
+  .chromatic-page .cu-brand {
+    gap: 0;
+  }
+  .chromatic-page .cu-brand > span {
+    display: none;
+  }
+  .chromatic-page .cu-brand .brand-logo {
+    width: 43px;
+    height: 43px;
+  }
+  .chromatic-page .cu-nav-reference {
+    font-size: 9px;
+    padding: 11px 13px;
+    gap: 15px;
+  }
+  .chromatic-page .cu-menu-toggle {
+    height: 44px;
+    width: 44px;
+  }
+  .chromatic-page .cu-navigation {
+    left: 5.5%;
+    right: 5.5%;
+    margin-top: 8px;
+  }
+  .chromatic-page .cu-hero {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    min-height: 0;
+    padding-top: 32px;
+    padding-bottom: 35px;
+  }
+  .chromatic-page .cu-hero-copy {
+    padding-top: 12px;
+  }
+  .chromatic-page .cu-hero h1 {
+    font-size: clamp(54px, 16.4vw, 76px);
+    line-height: 0.98;
+    margin-top: 26px;
+    margin-bottom: 20px;
+    letter-spacing: -0.07em;
+  }
+  .chromatic-page .cu-kicker {
+    font-size: 7px;
+    letter-spacing: 0.13em;
+  }
+  .chromatic-page .cu-hero-description {
+    font-size: 12px;
+    line-height: 1.85;
+  }
+  .chromatic-page .cu-hero-actions {
+    flex-direction: row;
+    align-items: center;
+    gap: 14px;
+    margin-top: 26px;
+  }
+  .chromatic-page .cu-button {
+    font-size: 10px;
+    padding: 16px 18px;
+    gap: 22px;
+  }
+  .chromatic-page .cu-quiet-link {
+    font-size: 8px;
+    gap: 9px;
+  }
+  .chromatic-page .cu-hero-edition {
+    padding-top: 18px;
+    margin-top: 30px;
+    font-size: 6px;
+  }
+  .chromatic-page .cu-stage {
+    min-height: 465px;
+    border-radius: 16px;
+  }
+  .chromatic-page .cu-stage-photo {
+    inset: -15% -30% -5%;
+  }
+  .chromatic-page .cu-stage-top {
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    font-size: 7px;
+  }
+  .chromatic-page .cu-stage-top svg {
+    width: 19px;
+    height: 19px;
+  }
+  .chromatic-page .cu-chrome-ring {
+    border-width: 10px;
+    top: 40%;
+    width: 75%;
+    height: 28%;
+  }
+  .chromatic-page .cu-stage-coordinate {
+    font-size: 6px;
+    left: 15px;
+  }
+  .chromatic-page .cu-floating-label {
+    bottom: 65px;
+    right: 16px;
+    padding: 16px;
+  }
+  .chromatic-page .cu-floating-label strong {
+    font-size: 16px;
+  }
+  .chromatic-page .cu-stage-bottom {
+    left: 20px;
+    right: 20px;
+    bottom: 18px;
+    font-size: 6px;
+  }
+  .chromatic-page .cu-strip {
+    padding: 21px 5%;
+    font-size: 14px;
+    gap: 15px;
+  }
+  .chromatic-page .cu-strip > span:nth-of-type(3),
+  .chromatic-page .cu-strip > span:nth-of-type(4),
+  .chromatic-page .cu-strip > svg:nth-of-type(2),
+  .chromatic-page .cu-strip > svg:nth-of-type(3) {
+    display: none;
+  }
+  .chromatic-page .cu-manifesto {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    padding-block: 65px;
+  }
+  .chromatic-page h2 {
+    font-size: 43px;
+    line-height: 1.05;
+  }
+  .chromatic-page .cu-manifesto h2 {
+    margin-top: 20px;
+  }
+  .chromatic-page .cu-manifesto-copy {
+    padding: 0;
+  }
+  .chromatic-page .cu-manifesto-copy > p:first-child {
+    font-size: 19px;
+    line-height: 1.55;
+    margin-bottom: 16px;
+  }
+  .chromatic-page .cu-manifesto-copy > p:nth-child(2) {
+    font-size: 12px;
+  }
+  .chromatic-page .cu-spectrum {
+    margin-top: 25px;
+  }
+  .chromatic-page .cu-editorial {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    margin-bottom: 65px;
+  }
+  .chromatic-page .cu-editorial-art {
+    min-height: 400px;
+  }
+  .chromatic-page .cu-editorial-overlay {
+    padding: 25px;
+  }
+  .chromatic-page .cu-editorial-overlay > strong {
+    font-size: 39px;
+    max-width: 250px;
+  }
+  .chromatic-page .cu-editorial-side {
+    padding: 30px;
+    min-height: 400px;
+  }
+  .chromatic-page .cu-editorial-side h2 {
+    font-size: 38px;
+    margin: 25px 0 20px;
+  }
+  .chromatic-page .cu-editorial-side > p:not(.cu-kicker) {
+    font-size: 12px;
+  }
+  .chromatic-page .cu-editorial-stat {
+    padding-top: 30px;
+  }
+  .chromatic-page .cu-editorial-stat > strong {
+    font-size: 60px;
+  }
+  .chromatic-page .cu-gallery-section {
+    padding: 60px 0;
+  }
+  .chromatic-page .cu-section-heading {
+    display: block;
+    margin-bottom: 30px;
+  }
+  .chromatic-page .cu-section-heading h2 {
+    margin-top: 20px;
+  }
+  .chromatic-page .cu-section-heading > p {
+    margin-top: 25px;
+    font-size: 12px;
+    max-width: 300px;
+  }
+  .chromatic-page .cu-gallery-toolbar {
+    display: block;
+    padding-bottom: 20px;
+    margin-bottom: 25px;
+  }
+  .chromatic-page .cu-filters {
+    display: inline-flex;
+    gap: 3px;
+    padding: 4px;
+    max-width: 100%;
+  }
+  .chromatic-page .cu-filters button {
+    padding: 10px 12px;
+    font-size: 9px;
+    gap: 12px;
+  }
+  .chromatic-page .cu-filters button > span {
+    font-size: 7px;
+  }
+  .chromatic-page .cu-gallery-toolbar > p {
+    margin-top: 15px;
+    font-size: 8px;
+  }
+  .chromatic-page .cu-gallery-grid {
+    gap: 12px;
+  }
+  .chromatic-page .cu-card {
+    border-radius: 10px;
+  }
+  .chromatic-page .cu-card-top {
+    padding: 12px 10px;
+    font-size: 6px;
+    letter-spacing: 0.04em;
+  }
+  .chromatic-page .cu-card-top svg {
+    width: 12px;
+    height: 12px;
+  }
+  .chromatic-page .cu-card-art {
+    height: 175px;
+    margin: 0 7px;
+    border-radius: 5px;
+  }
+  .chromatic-page .cu-card-art > img {
+    width: 96%;
+    height: 96%;
+  }
+  .chromatic-page .cu-card-caption {
+    padding: 15px 11px;
+  }
+  .chromatic-page .cu-card-caption > p {
+    font-size: 5px;
+    letter-spacing: 0.04em;
+    margin-bottom: 8px;
+  }
+  .chromatic-page .cu-card-caption h3 {
+    font-size: 15px;
+    line-height: 1.25;
+    min-height: 36px;
+    letter-spacing: -0.04em;
+    margin-bottom: 7px;
+  }
+  .chromatic-page .cu-card-caption > span {
+    font-size: 8px;
+    line-height: 1.7;
+    min-height: 55px;
+  }
+  .chromatic-page .cu-card-bottom {
+    padding: 10px 11px;
+    font-size: 5px;
+  }
+  .chromatic-page .cu-card-bottom i {
+    width: 4px;
+    height: 4px;
+  }
+  .chromatic-page .cu-gallery-note {
+    gap: 8px;
+    align-items: start;
+    margin-top: 25px;
+    padding-top: 20px;
+    font-size: 8px;
+    line-height: 1.7;
+  }
+  .chromatic-page .cu-gallery-note > span {
+    display: none;
+  }
+  .chromatic-page .cu-principles {
+    padding-block: 65px;
+  }
+  .chromatic-page .cu-principles-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .chromatic-page .cu-principles-grid > article {
+    padding: 26px;
+  }
+  .chromatic-page .cu-principles-grid > article > div {
+    margin-bottom: 35px;
+  }
+  .chromatic-page .cu-principles-grid h3 {
+    font-size: 23px;
+  }
+  .chromatic-page .cu-principles-grid p {
+    font-size: 12px;
+  }
+  .chromatic-page .cu-statement {
+    padding: 35px 26px;
+    margin-bottom: 65px;
+    border-radius: 16px;
+  }
+  .chromatic-page .cu-statement h2 {
+    font-size: 46px;
+    margin-top: 22px;
+    margin-bottom: 28px;
+  }
+  .chromatic-page .cu-statement-mark {
+    top: 40px;
+    right: -20px;
+    font-size: 180px;
+    opacity: 0.6;
+  }
+  .chromatic-page .cu-statement-bottom {
+    font-size: 5px;
+    letter-spacing: 0.08em;
+    margin-top: 35px;
+    padding-top: 20px;
+  }
+  .chromatic-page .cu-faq {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding-bottom: 65px;
+  }
+  .chromatic-page .cu-faq h2 {
+    margin: 20px 0;
+  }
+  .chromatic-page .cu-faq > div > p:not(.cu-kicker) {
+    font-size: 12px;
+  }
+  .chromatic-page .faq-list summary {
+    padding: 23px 8px;
+    font-size: 14px;
+    gap: 14px;
+  }
+  .chromatic-page .faq-list details > p {
+    font-size: 11px;
+    padding: 0 8px 23px;
+  }
+  .chromatic-page .cu-footer {
+    padding: 40px 0 25px;
+  }
+  .chromatic-page .cu-footer-top {
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  .chromatic-page .cu-footer-top .brand-logo {
+    height: 54px;
+    width: 54px;
+  }
+  .chromatic-page .cu-footer-top > p {
+    font-size: 17px;
+  }
+  .chromatic-page .cu-footer-top > a:last-child {
+    width: 100%;
+    justify-content: space-between;
+    font-size: 10px;
+  }
+  .chromatic-page .cu-footer-word {
+    padding: 40px 0 30px;
+    font-size: 17vw;
+  }
+  .chromatic-page .cu-footer-word > span {
+    font-size: 15px;
+  }
+  .chromatic-page .cu-footer-bottom {
+    flex-wrap: wrap;
+    font-size: 7px;
+    gap: 22px;
+    padding-top: 20px;
+  }
+  .chromatic-page .cu-footer-bottom nav {
+    gap: 20px;
+    font-size: 9px;
+  }
+}
+@media (max-width: 360px) {
+  .chromatic-page .cu-hero h1 {
+    font-size: 53px;
+  }
+  .chromatic-page .cu-hero-actions {
+    gap: 4px;
+    flex-direction: column;
+    align-items: start;
+  }
+  .chromatic-page .cu-card-art {
+    height: 145px;
+  }
+  .chromatic-page .cu-filters button {
+    padding: 10px 10px;
+    gap: 8px;
+  }
+  .chromatic-page .cu-card-caption h3 {
+    font-size: 13px;
+  }
+  .chromatic-page .cu-card-top {
+    font-size: 5px;
+  }
+  .chromatic-page .cu-card-caption > p {
+    font-size: 4.5px;
+  }
+  .chromatic-page .cu-statement h2 {
+    font-size: 39px;
+  }
+  .chromatic-page h2 {
+    font-size: 39px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .chromatic-page .cu-stage {
+    transform: none !important;
+  }
+  .chromatic-page [data-motion="ready"] .cu-reveal:not([data-revealed="true"]) {
+    opacity: 1;
+    transform: none;
+  }
+  .chromatic-page .cu-card {
+    animation: none;
+  }
+  .chromatic-page *,
+  .chromatic-page *::before,
+  .chromatic-page *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+@media (hover: none) {
+  .chromatic-page .cu-stage {
+    transform: none;
+  }
+  .chromatic-page .cu-card:hover {
+    transform: none;
+  }
+}
+/* Refined image surfaces and readable archive metadata. */
+.chromatic-page .cu-card-art {
+  background: radial-gradient(
+    ellipse at 50% 45%,
+    color-mix(in srgb, var(--variant) 15%, #fcfaff) 20%,
+    color-mix(in srgb, var(--variant) 18%, #d8d4df) 100%
+  );
+}
+.chromatic-page .cu-card-caption > p {
+  font-size: 8px;
+}
+.chromatic-page .cu-card-bottom {
+  font-size: 8px;
+}
+.chromatic-page .cu-strip svg {
+  width: 23px;
+  height: 23px;
+  flex-shrink: 0;
+  color: #c4a5ee;
+}
+.chromatic-page .cu-hero-copy {
+  animation: cu-hero-in 0.7s ease both;
+}
+@keyframes cu-hero-in {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@media (max-width: 600px) {
+  .chromatic-page .cu-card-top {
+    font-size: 8px;
+  }
+  .chromatic-page .cu-card-caption > p {
+    font-size: 8px;
+    letter-spacing: 0;
+  }
+  .chromatic-page .cu-card-caption > span {
+    font-size: 12px;
+    min-height: 68px;
+  }
+  .chromatic-page .cu-card-bottom {
+    font-size: 8px;
+  }
+  .chromatic-page .cu-strip svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+@media (max-width: 360px) {
+  .chromatic-page .cu-card-caption > p {
+    font-size: 8px;
+  }
+  .chromatic-page .cu-card-top {
+    font-size: 8px;
+  }
+}

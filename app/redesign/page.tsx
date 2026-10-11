@@ -1,268 +1,329 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { DemoNav } from "@/components/demo-nav";
-import { SiteNav } from "@/components/site-nav";
 import { BrandImage, BrandLogo } from "@/components/brand-image";
+import { ChromaticFaq } from "./_components/faq";
 import { Icon } from "@/components/icons";
-import { VisualGallery } from "@/components/visual-gallery";
-import { DemoFaq } from "@/components/demo-faq";
-import { brand, referenceAssetsAuthorized } from "@/lib/brand";
+import { brand } from "@/lib/brand";
+import { ChromaticHeader } from "./_components/header";
+import { ChromaticGallery } from "./_components/gallery";
+import { ChromaticMotion } from "./_components/motion";
+import "./chromatic.css";
 export const metadata: Metadata = {
-  title: "Nueva perspectiva · Packman / Demo no oficial",
+  title: "Chromatic Underground · Packman / Demo no oficial",
+  description:
+    "Una exploración visual independiente: identidad Packman, color, packaging y diseño editorial. Demo sin compras ni pagos.",
 };
 export default function Redesign() {
   return (
-    <div className="redesign-page">
+    <div className="chromatic-page">
       <DemoNav current="redesign" />
-      <SiteNav variant="redesign" />
-      <main id="contenido">
-        {!referenceAssetsAuthorized && (
-          <div className="asset-notice">
-            Fotografías y logotipo pendientes de permiso de reutilización. La
-            paleta, la tipografía y la estructura se basan en la referencia
-            pública.
-          </div>
-        )}
-        <section className="modern-hero" id="inicio">
-          <div className="modern-container modern-hero-grid">
-            <div className="modern-hero-copy">
-              <p className="eyebrow">
-                <span />
-                PACKMAN · ESTUDIO DE IDENTIDAD
+      <ChromaticHeader />
+      <ChromaticMotion>
+        <main id="contenido">
+          <section className="cu-hero cu-container" id="inicio">
+            <div className="cu-hero-copy">
+              <p className="cu-kicker">
+                <i />
+                PACKMAN / CHROMATIC UNDERGROUND
               </p>
               <h1>
-                Misma esencia.
+                No es solo
                 <br />
-                Otra <span>perspectiva.</span>
+                color.
+                <br />
+                <span>Es carácter.</span>
               </h1>
-              <p className="modern-lead">
-                Color que destaca. Identidad que permanece.
+              <p className="cu-hero-description">
+                Una identidad que rompe el molde.
                 <br />
-                Una nueva mirada al universo visual de Packman.
+                Un universo visual que no pasa desapercibido.
               </p>
-              <a className="modern-button" href="#galeria">
-                Explorar la identidad <Icon name="arrow" />
-              </a>
-              <div className="modern-hero-bottom">
-                <span>DISEÑO / COLOR / CULTURA VISUAL</span>
-                <a
-                  href="#identidad"
-                  aria-label="Descubrir el estudio de identidad"
-                >
-                  ↓
+              <div className="cu-hero-actions">
+                <a href="#galeria" className="cu-button cu-button-primary">
+                  Explorar el universo <Icon name="arrow" />
+                </a>
+                <a href="#identidad" className="cu-quiet-link">
+                  Descubre la dirección <span>↓</span>
                 </a>
               </div>
+              <div className="cu-hero-edition">
+                <span>INDEPENDENT VISUAL STUDY</span>
+                <span>VOL. 01 — 2026</span>
+              </div>
             </div>
-            <div className="modern-hero-art">
-              <BrandImage
-                src={brand.hero}
-                alt="Composición de packaging e ilustraciones de Packman"
-                width={2000}
-                height={2000}
-                priority
-                sizes="(max-width: 980px) 100vw, 50vw"
-              />
-              <div className="art-caption">
-                <span>01 — IDENTIDAD EN COLOR</span>
+            <div className="cu-stage">
+              <div className="cu-stage-atmosphere" />
+              <div className="cu-stage-top">
+                <span>
+                  <i />
+                  SPECTRUM / 001
+                </span>
                 <Icon name="spark" />
               </div>
-              <div className="art-sticker">
-                <span>UNA NUEVA</span>
-                <strong>MIRADA</strong>
-                <Icon name="arrow" />
+              <div className="cu-stage-photo">
+                <BrandImage
+                  src={brand.features}
+                  width={1920}
+                  height={1280}
+                  alt="Fotografía de referencia con reflejos cromáticos sobre fondo negro"
+                  priority
+                  sizes="(max-width:980px) 100vw, 55vw"
+                />
+              </div>
+              <div className="cu-chrome-ring" aria-hidden="true" />
+              <div className="cu-stage-coordinate">41° / VISUAL FREQUENCY</div>
+              <div className="cu-floating-label">
+                <span>FULL SPECTRUM</span>
+                <strong>Fuera de lo ordinario.</strong>
+                <div>
+                  <i />
+                  <i />
+                  <i />
+                  <i />
+                  <i />
+                </div>
+              </div>
+              <div className="cu-stage-bottom">
+                <span>COLOR. MATERIAL. ATTITUDE.</span>
+                <span>↗</span>
               </div>
             </div>
+          </section>
+          <div className="cu-strip" aria-hidden="true">
+            <span>CHROMATIC</span>
+            <Icon name="spark" />
+            <span>UNDERGROUND</span>
+            <Icon name="spark" />
+            <span>PACKMAN</span>
+            <Icon name="spark" />
+            <span>NOT ORDINARY</span>
           </div>
-        </section>
-        <div className="modern-ribbon" aria-hidden="true">
-          <span>PACKMAN</span>
-          <Icon name="spark" />
-          <span>COLOR CON CARÁCTER</span>
-          <Icon name="spark" />
-          <span>IDENTIDAD PROPIA</span>
-          <Icon name="spark" />
-          <span>PACKMAN</span>
-        </div>
-        <section className="modern-identity modern-container" id="identidad">
-          <div className="identity-art">
-            <BrandImage
-              src={brand.about}
-              alt="Estudio fotográfico del universo visual de Packman"
-              width={1024}
-              height={985}
-              sizes="(max-width: 980px) 90vw, 40vw"
-            />
-            <div className="identity-image-label">
-              <span>EL PUNTO DE PARTIDA</span>
-              <span>01 / 03</span>
-            </div>
-          </div>
-          <div className="identity-copy">
-            <p className="eyebrow">01 / LA IDENTIDAD</p>
-            <h2>
-              Reconocible.
-              <br />
-              Desde el primer
-              <br />
-              <span>detalle.</span>
-            </h2>
-            <p>
-              El personaje, el color y una tipografía con personalidad. El
-              universo gráfico de Packman tiene una voz propia.
-            </p>
-            <p>
-              Esta propuesta conserva los acentos menta y crema de la referencia
-              y los combina con una composición más limpia, espacios generosos y
-              un contraste cuidado.
-            </p>
-            <div className="identity-palette" aria-label="Paleta de marca">
-              <span
-                style={{ background: "#6d8196" }}
-                title="Azul grisáceo #6d8196"
-              />
-              <span style={{ background: "#adebb3" }} title="Menta #adebb3" />
-              <span style={{ background: "#fdfbd4" }} title="Crema #fdfbd4" />
-              <span style={{ background: "#1d2528" }} title="Carbón #1d2528" />
-              <p>
-                La misma paleta.
+          <section
+            className="cu-manifesto cu-container cu-reveal"
+            id="identidad"
+          >
+            <div className="cu-manifesto-heading">
+              <p className="cu-kicker">01 / EL ADN VISUAL</p>
+              <h2>
+                La identidad
                 <br />
-                Un nuevo equilibrio.
-              </p>
+                no se explica.
+                <br />
+                <span>Se reconoce.</span>
+              </h2>
             </div>
-          </div>
-        </section>
-        <section className="modern-gallery-section" id="galeria">
-          <div className="modern-container">
-            <div className="modern-section-heading">
-              <div>
-                <p className="eyebrow">02 / ARCHIVO VISUAL</p>
-                <h2>
-                  Un universo.
+            <div className="cu-manifesto-copy">
+              <p>
+                El personaje. El packaging. La energía del color. Packman tiene
+                un lenguaje propio. Aquí lo llevamos a otra dimensión.
+              </p>
+              <p>
+                Grafito como lienzo. Reflejos cromáticos como firma. Una
+                exploración donde la precisión del diseño se encuentra con el
+                pulso de la calle.
+              </p>
+              <div className="cu-spectrum">
+                <span />
+                <span />
+                <span />
+                <span />
+                <span />
+                <div>
+                  FIVE TONES.
                   <br />
-                  <span>Mucho carácter.</span>
+                  ONE ATTITUDE.
+                </div>
+              </div>
+            </div>
+          </section>
+          <section className="cu-editorial cu-container cu-reveal">
+            <div className="cu-editorial-art">
+              <BrandImage
+                src={brand.hero}
+                alt="Ilustraciones y packaging multicolor del universo Packman"
+                width={2000}
+                height={2000}
+                sizes="(max-width:600px) 90vw, 55vw"
+              />
+              <div className="cu-editorial-overlay">
+                <span>THE VISUAL LANGUAGE</span>
+                <strong>Bold by nature.</strong>
+                <span>PACKMAN / ARCHIVE</span>
+              </div>
+            </div>
+            <div className="cu-editorial-side">
+              <p className="cu-kicker">DEL OBJETO AL UNIVERSO</p>
+              <h2>
+                Todo empieza
+                <br />
+                en un <span>detalle.</span>
+              </h2>
+              <p>
+                Color, ilustración y textura. Cada referencia aporta una pieza a
+                una identidad imposible de confundir.
+              </p>
+              <div className="cu-editorial-stat">
+                <strong>08</strong>
+                <div>
+                  REFERENCIAS
+                  <br />
+                  UN MISMO UNIVERSO
+                </div>
+              </div>
+              <a href="#galeria" className="cu-text-link">
+                Entrar en el archivo <Icon name="arrow" />
+              </a>
+            </div>
+          </section>
+          <section className="cu-gallery-section" id="galeria">
+            <div className="cu-container">
+              <div className="cu-section-heading cu-reveal">
+                <div>
+                  <p className="cu-kicker">02 / ARCHIVO CROMÁTICO</p>
+                  <h2>
+                    Un color.
+                    <br />
+                    Otra <span>frecuencia.</span>
+                  </h2>
+                </div>
+                <p>
+                  Packaging y gráfica. Ocho referencias,
+                  <br />
+                  cada una con su propia firma visual.
+                  <br />
+                  <span>Solo diseño. Sin venta.</span>
+                </p>
+              </div>
+              <ChromaticGallery />
+              <div className="cu-gallery-note">
+                <Icon name="layers" />
+                <p>
+                  Referencias gráficas de la marca · Sin precios ni funciones de
+                  compra
+                </p>
+                <span>ARCHIVE / 01—08</span>
+              </div>
+            </div>
+          </section>
+          <section className="cu-principles cu-container cu-reveal">
+            <div className="cu-section-heading">
+              <div>
+                <p className="cu-kicker">03 / DISEÑO CON INTENCIÓN</p>
+                <h2>
+                  Más presencia.
+                  <br />
+                  Menos <span>ruido.</span>
                 </h2>
               </div>
               <p>
-                Referencias de packaging y gráfica de la portada.
+                Experimental en la forma.
                 <br />
-                Una galería para observar, comparar y explorar el diseño.
+                Preciso en cada decisión.
               </p>
             </div>
-            <VisualGallery />
-            <p className="gallery-footnote">
-              <Icon name="layers" />
-              Archivo de referencias gráficas. Sin precios ni funciones de
-              compra.
-            </p>
-          </div>
-        </section>
-        <section className="modern-principles modern-container">
-          <div className="modern-section-heading">
-            <div>
-              <p className="eyebrow">03 / UNA EXPERIENCIA MÁS CLARA</p>
-              <h2>
-                Menos ruido.
-                <br />
-                Más <span>intención.</span>
-              </h2>
+            <div className="cu-principles-grid">
+              {[
+                {
+                  n: "01",
+                  icon: "type" as const,
+                  title: "La forma tiene voz.",
+                  body: "Tipografía editorial, escala contundente y espacio para que cada idea respire.",
+                },
+                {
+                  n: "02",
+                  icon: "layers" as const,
+                  title: "Profundidad, sin peso.",
+                  body: "Vidrio oscuro, reflejos suaves y capas que dan dimensión a la experiencia.",
+                },
+                {
+                  n: "03",
+                  icon: "screen" as const,
+                  title: "El ritmo es tuyo.",
+                  body: "Navegación clara y movimiento sutil. La misma intención en cada pantalla.",
+                },
+              ].map((item) => (
+                <article key={item.n}>
+                  <div>
+                    <span>{item.n}</span>
+                    <Icon name={item.icon} />
+                  </div>
+                  <h3>{item.title}</h3>
+                  <p>{item.body}</p>
+                </article>
+              ))}
             </div>
-            <Link href="/original" className="text-link">
+          </section>
+          <section className="cu-statement cu-container cu-reveal">
+            <div className="cu-statement-aura" aria-hidden="true" />
+            <p className="cu-kicker">MISMA MARCA. OTRA DIMENSIÓN.</p>
+            <h2>
+              La diferencia
+              <br />
+              <span>se siente.</span>
+            </h2>
+            <Link href="/original" className="cu-button cu-button-primary">
               Comparar con el original <Icon name="arrow" />
             </Link>
-          </div>
-          <div className="principles-grid">
-            {[
-              {
-                n: "01",
-                icon: "type" as const,
-                title: "Tipografía que respira.",
-                text: "Títulos con presencia. Párrafos más breves. Una lectura con ritmo y jerarquía.",
-              },
-              {
-                n: "02",
-                icon: "layers" as const,
-                title: "Cada bloque, un propósito.",
-                text: "Identidad, galería y contexto. El contenido se organiza para encontrarlo sin esfuerzo.",
-              },
-              {
-                n: "03",
-                icon: "screen" as const,
-                title: "Natural en cada pantalla.",
-                text: "Navegación accesible, distribución adaptable y movimiento discreto.",
-              },
-            ].map((item) => (
-              <article key={item.n}>
-                <div className="principle-top">
-                  <span>{item.n}</span>
-                  <Icon name={item.icon} />
-                </div>
-                <h3>{item.title}</h3>
-                <p>{item.text}</p>
-              </article>
-            ))}
-          </div>
-        </section>
-        <section className="modern-banner">
-          <div className="modern-container">
-            <p className="eyebrow">DOS VERSIONES. UNA IDENTIDAD.</p>
-            <h2>
-              El cambio se ve.
-              <br />
-              La esencia <em>se queda.</em>
-            </h2>
-            <Link className="modern-button light" href="/original">
-              Ver la reconstrucción <Icon name="arrow" />
-            </Link>
-            <span className="banner-star" aria-hidden="true">
-              ✳
+            <span className="cu-statement-mark" aria-hidden="true">
+              ↗
             </span>
-          </div>
-        </section>
-        <section className="modern-faq modern-container" id="faq">
-          <div>
-            <p className="eyebrow">EL CONTEXTO, CLARO</p>
-            <h2>
-              Antes de
-              <br />
-              <span>seguir explorando.</span>
-            </h2>
-            <p>
-              Todo lo que necesitas saber
-              <br />
-              sobre este estudio visual.
+            <p className="cu-statement-bottom">
+              CHROMATIC UNDERGROUND / INDEPENDENT CONCEPT
             </p>
-          </div>
-          <DemoFaq />
-        </section>
-      </main>
-      <footer className="modern-footer" id="demo">
-        <div className="modern-container">
-          <div className="footer-main">
-            <Link href="/redesign" aria-label="Packman, inicio de la demo">
-              <BrandLogo />
-            </Link>
-            <p>
-              Una mirada independiente
-              <br />
-              al universo visual de Packman.
-            </p>
-            <a href="#inicio" className="back-to-top">
-              Volver arriba <span>↑</span>
-            </a>
-          </div>
-          <div className="footer-bottom">
-            <p>
-              Demo no oficial · Sin afiliación comercial · Sin compras ni pagos
-            </p>
-            <nav aria-label="Comparar versiones">
-              <Link href="/original">Original</Link>
-              <Link href="/redesign" aria-current="page">
-                Rediseño
+          </section>
+          <section className="cu-faq cu-container cu-reveal" id="faq">
+            <div>
+              <p className="cu-kicker">04 / SIN LETRA PEQUEÑA</p>
+              <h2>
+                El contexto.
+                <br />
+                <span>Bien claro.</span>
+              </h2>
+              <p>
+                Una propuesta visual independiente.
+                <br />
+                Las respuestas, sin rodeos.
+              </p>
+            </div>
+            <ChromaticFaq />
+          </section>
+        </main>
+        <footer className="cu-footer" id="demo">
+          <div className="cu-container">
+            <div className="cu-footer-top">
+              <Link href="/redesign" aria-label="Packman, inicio de la demo">
+                <BrandLogo />
               </Link>
-            </nav>
+              <p>
+                Different frequency.
+                <br />
+                <span>Same identity.</span>
+              </p>
+              <a href="#inicio">
+                Volver arriba <span>↑</span>
+              </a>
+            </div>
+            <div className="cu-footer-word" aria-hidden="true">
+              PACKMAN
+            </div>
+            <div className="cu-footer-bottom">
+              <p>
+                Demo no oficial · Sin afiliación comercial
+                <br />
+                Sin compras, pagos ni carrito.
+              </p>
+              <span>CHROMATIC UNDERGROUND — VOL. 01</span>
+              <nav aria-label="Comparar versiones">
+                <Link href="/original">Original</Link>
+                <Link href="/redesign" aria-current="page">
+                  Rediseño ↗
+                </Link>
+              </nav>
+            </div>
           </div>
-        </div>
-      </footer>
+        </footer>
+      </ChromaticMotion>
     </div>
   );
 }
