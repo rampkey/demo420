@@ -1,0 +1,28 @@
+{
+  "url": "https://packmanvape.es/",
+  "accessed_on": "2026-10-11",
+  "http_status": 200,
+  "bytes": 454624,
+  "sha256": "002df9053b4c10bc778134d03e7f81741871199beafaea613241de08d796d429",
+  "method": "Read-only HTTPS GET with TLS verification; public HTML and CSS inspected. No source scripts copied into the app.",
+  "fonts": [
+    {
+      "family": "oswald",
+      "source": "https://github.com/google/fonts/tree/main/ofl/oswald",
+      "license": "SIL Open Font License 1.1",
+      "local_license": "public/fonts/oswald-OFL.txt"
+    },
+    {
+      "family": "nunito",
+      "source": "https://github.com/google/fonts/tree/main/ofl/nunito",
+      "license": "SIL Open Font License 1.1",
+      "local_license": "public/fonts/nunito-OFL.txt"
+    },
+    {
+      "family": "opensans",
+      "source": "https://github.com/google/fonts/tree/main/ofl/opensans",
+      "license": "SIL Open Font License 1.1",
+      "local_license": "public/fonts/opensans-OFL.txt"
+    }
+  ]
+}
