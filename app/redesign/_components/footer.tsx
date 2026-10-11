@@ -21,35 +21,6 @@ export function ChromaticFooter() {
           </a>
         </div>
 
-        <div className="cu-footer-contact" aria-labelledby="cu-contact-heading">
-          <div className="cu-footer-contact-heading">
-            <span className="cu-footer-overline">PACKMAN / CONTACTO</span>
-            <h2 id="cu-contact-heading">Contacto</h2>
-            <p>Datos publicados en la web de referencia.</p>
-          </div>
-          <div className="cu-footer-contact-grid">
-            <div className="cu-footer-contact-card">
-              <span>REFERENCIA DE CONTACTO</span>
-              <strong>{contactReference.name}</strong>
-              <small>Nombre que figura en la web original</small>
-            </div>
-            <div className="cu-footer-contact-card">
-              <span>TELÉFONO</span>
-              <strong>{contactReference.phone}</strong>
-              <small>Según la web de referencia</small>
-            </div>
-            <div className="cu-footer-contact-card">
-              <span>CORREO ELECTRÓNICO</span>
-              <strong className="cu-footer-email">{contactReference.email}</strong>
-              <small>Según la web de referencia</small>
-            </div>
-          </div>
-          <p className="cu-footer-contact-note">
-            {contactReference.source} La dirección postal se ha omitido por
-            contener información contradictoria en la web original.
-          </p>
-        </div>
-
         <nav className="cu-footer-navigation" aria-label="Navegación del pie de página">
           {navigation.map((item) => (
             <Link key={item.href} href={item.href}>
@@ -57,7 +28,31 @@ export function ChromaticFooter() {
             </Link>
           ))}
         </nav>
-        <div className="cu-footer-word" aria-hidden="true">PACKMAN</div>
+
+        <div className="cu-footer-signature">
+          <div className="cu-footer-word" aria-hidden="true">PACKMAN</div>
+          <section className="cu-footer-details" aria-labelledby="cu-footer-details-heading">
+            <h2 id="cu-footer-details-heading">CONTACTO</h2>
+            <dl>
+              <div>
+                <dt>Nombre publicado</dt>
+                <dd>{contactReference.name}</dd>
+              </div>
+              <div>
+                <dt>Teléfono</dt>
+                <dd>{contactReference.phone}</dd>
+              </div>
+              <div>
+                <dt>Correo electrónico</dt>
+                <dd>{contactReference.email}</dd>
+              </div>
+            </dl>
+            <p className="cu-footer-details-note">
+              Datos del sitio original · Pendientes de confirmación.
+            </p>
+          </section>
+        </div>
+
         <div className="cu-footer-bottom">
           <p>
             Propuesta independiente de diseño · Demo no oficial
