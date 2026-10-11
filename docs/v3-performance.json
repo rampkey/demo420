@@ -1,0 +1,71 @@
+{
+  "measured_on": "2026-10-11",
+  "url": "http://127.0.0.1:3001/redesign",
+  "environment": "Local Next production server, Chromium via Lighthouse, default simulated desktop/mobile throttling. These are lab measurements, not Vercel field data or guarantees.",
+  "results": {
+    "desktop": {
+      "lighthouse_version": "13.5.0",
+      "performance_score": 98,
+      "accessibility_score": 100,
+      "metrics": {
+        "first-contentful-paint": {
+          "value": 498.44539999999995,
+          "unit": "millisecond",
+          "display": "0.5 s"
+        },
+        "largest-contentful-paint": {
+          "value": 908.7044999999999,
+          "unit": "millisecond",
+          "display": "0.9 s"
+        },
+        "total-blocking-time": {
+          "value": 94.50000000000011,
+          "unit": "millisecond",
+          "display": "90 ms"
+        },
+        "cumulative-layout-shift": {
+          "value": 0.0003787494594224348,
+          "unit": "unitless",
+          "display": "0"
+        },
+        "speed-index": {
+          "value": 972.1725925284491,
+          "unit": "millisecond",
+          "display": "1.0 s"
+        }
+      }
+    },
+    "mobile": {
+      "lighthouse_version": "13.5.0",
+      "performance_score": 88,
+      "accessibility_score": 100,
+      "metrics": {
+        "first-contentful-paint": {
+          "value": 1824.9832500000002,
+          "unit": "millisecond",
+          "display": "1.8 s"
+        },
+        "largest-contentful-paint": {
+          "value": 3699.9832499999998,
+          "unit": "millisecond",
+          "display": "3.7 s"
+        },
+        "total-blocking-time": {
+          "value": 119.5,
+          "unit": "millisecond",
+          "display": "120 ms"
+        },
+        "cumulative-layout-shift": {
+          "value": 0.009059228417799917,
+          "unit": "unitless",
+          "display": "0.009"
+        },
+        "speed-index": {
+          "value": 1824.9832500000002,
+          "unit": "millisecond",
+          "display": "1.8 s"
+        }
+      }
+    }
+  }
+}

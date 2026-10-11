@@ -1,0 +1,146 @@
+{
+  "accessed_on": "2026-10-11",
+  "timezone": "Europe/Madrid",
+  "method": "Read-only HTTPS GET of public pages and authorized images. TLS verification enabled. Source HTML is inspected only, never executed or embedded.",
+  "pages": [
+    {
+      "id": "sobre-nosotros",
+      "url": "https://packmanvape.es/sobre-nosotros/",
+      "status": 200,
+      "bytes": 225693,
+      "sha256": "b9064c8e29de6a087b3cbbbe562e2fcc2ee9e1bb2ca937ebdf88c0bc5028e91c",
+      "published_categories": []
+    },
+    {
+      "id": "faq",
+      "url": "https://packmanvape.es/faq/",
+      "status": 200,
+      "bytes": 244217,
+      "sha256": "fa0b7c78433070d211878ddd4ce8cb52b066fb7ad748b06a281314d4bae3a1fa",
+      "published_categories": []
+    },
+    {
+      "id": "contacta-con-nosotros",
+      "url": "https://packmanvape.es/contacta-con-nosotros/",
+      "status": 200,
+      "bytes": 320442,
+      "sha256": "fd0038695ecf3595ef7d9db72c53d33aff9abd7786a14f67387bc5441379756a",
+      "published_categories": []
+    },
+    {
+      "id": "shop",
+      "url": "https://packmanvape.es/shop/",
+      "status": 200,
+      "bytes": 456214,
+      "sha256": "7cd4b25dbf70b1645ac031df574fff649608c59c1fe13c154f87b5bce801a8f0",
+      "published_categories": []
+    },
+    {
+      "id": "mystery-og",
+      "url": "https://packmanvape.es/product/packman-mystery-og-2000mg-thc-espana/",
+      "status": 200,
+      "bytes": 318494,
+      "sha256": "bab767ddcdadfbd7048898f5023a7736eec91a9de0065a73c5c4906397821333",
+      "published_categories": ["Category: Packman Live Resin"]
+    },
+    {
+      "id": "granddaddy-urkle",
+      "url": "https://packmanvape.es/product/comprar-packman-granddaddy-urkle-guia-vape-thc-espana/",
+      "status": 200,
+      "bytes": 321541,
+      "sha256": "4125b72ac94e0e11866cc69e24795a57b1d2cfee432416aa87614113282711b2",
+      "published_categories": ["Category: Packman Live Resin"]
+    },
+    {
+      "id": "cereal-skunk",
+      "url": "https://packmanvape.es/product/comprar-packman-cereal-skunk-2000mg-thc/",
+      "status": 200,
+      "bytes": 319000,
+      "sha256": "c3aa9341948891f83b3aee666eef59d11de1629f3bc0e9e95711ce5597759154",
+      "published_categories": ["Category: Packman Live Resin"]
+    },
+    {
+      "id": "berry-payton",
+      "url": "https://packmanvape.es/product/comprar-packman-berry-payton-2000mg-thc-vaper-thc-espana/",
+      "status": 200,
+      "bytes": 320885,
+      "sha256": "7578adc15fdd2ba312a58abc23d550d6c1126f3e097ed9211c981417f0e7562a",
+      "published_categories": ["Category: Packman Live Resin"]
+    },
+    {
+      "id": "mango-tango",
+      "url": "https://packmanvape.es/product/packman-mango-tango-2000-mg/",
+      "status": 200,
+      "bytes": 322641,
+      "sha256": "f310bd9c3e636ece8ea1af8b6ca94b7b2ea27bac3f0d4c94e3870f692791a2bb",
+      "published_categories": ["Category: packman 2g vape"]
+    },
+    {
+      "id": "variety-box-10",
+      "url": "https://packmanvape.es/product/packman-vapes-box-10-pack-variety-box/",
+      "status": 200,
+      "bytes": 308416,
+      "sha256": "5a0c93a8a31dd56fcabb35826d6a7618759ff7ff5a9ef4604321afed78ab5a50",
+      "published_categories": ["Category: packman 2g disposable"]
+    },
+    {
+      "id": "variety-box-50",
+      "url": "https://packmanvape.es/product/pack-man-vape-box-50-pack-variety-box/",
+      "status": 200,
+      "bytes": 313270,
+      "sha256": "7d3621565662ef9a5cc16afd1e8cc886453b30613e74c29fd35f6d5e501fd6eb",
+      "published_categories": ["Category: packman 2g disposable"]
+    },
+    {
+      "id": "variety-box-100",
+      "url": "https://packmanvape.es/product/comprar-packman-vape-bulk/",
+      "status": 200,
+      "bytes": 309562,
+      "sha256": "ff57c53f9c0749da55a88f167973473d728fbcbe3d496840a5ef2874cda7fed5",
+      "published_categories": ["Category: packman 2g disposable"]
+    },
+    {
+      "id": "home",
+      "url": "https://packmanvape.es/",
+      "status": 200,
+      "bytes": 454624,
+      "sha256": "1908371e63ddb21fa88a3731f50444cd8001c4fc2d0e3866cae2823f694d07cf"
+    }
+  ],
+  "new_images": [
+    {
+      "file": "public/redesign/images/variety-box-50.webp",
+      "url": "https://packmanvape.es/wp-content/uploads/2026/06/pack-man-vape-boxs.webp",
+      "width": 842,
+      "height": 956,
+      "bytes": 108530,
+      "sha256": "9bf65bfa6930466cea3436c227ad8d6c6cdf1bcddea53422997b436a1eeda651"
+    }
+  ],
+  "previous_asset_manifests": [
+    "asset-manifest.json",
+    "v2-source-manifest.json"
+  ],
+  "scope": "Neutral educational excerpts, authentic reference names, photographs and published taxonomy only. No sales copy, potency/effects claims, prices, availability or seller channels. Eight-reference subset, not a full commercial reconstruction.",
+  "taxonomy_note": "Category strings are reproduced labels. They are not validated composition, concentration or technical specifications.",
+  "contact_note": "Published phone and address are inconsistent and not used. Contact form is a local simulation with no transmission or persistence.",
+  "variety_box_50": "Its detail page returned HTTP 200 in V3; source identification is now verified and its primary high-resolution photograph is local.",
+  "derived_fonts": [
+    {
+      "file": "public/redesign/fonts/space-grotesk.woff2",
+      "source_file": "public/redesign/fonts/space-grotesk.ttf",
+      "bytes": 49320,
+      "sha256": "396f575fa97fb68d8395668e2115d16590c5cd3b15cfcb8b55081d797b8facb6",
+      "note": "Same glyphs and horizontal metrics; WOFF2 encoding.",
+      "license": "SIL Open Font License 1.1"
+    },
+    {
+      "file": "public/redesign/fonts/opensans-latin.woff2",
+      "source_file": "public/fonts/opensans.ttf",
+      "bytes": 110344,
+      "sha256": "55f3bcdbde14306ea91b2d3c3a6b545e7b90751870e90caa1e9f36bf7dd6b8ee",
+      "note": "Latin subset (U+0000–024F), punctuation and arrows; original full font remains as fallback for other scripts.",
+      "license": "SIL Open Font License 1.1"
+    }
+  ]
+}

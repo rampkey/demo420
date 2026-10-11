@@ -6,7 +6,7 @@ export function PageHeading({
 }: {
   eyebrow: string;
   title: string;
-  accent: string;
+  accent?: string;
   description: string;
 }) {
   return (
@@ -17,8 +17,12 @@ export function PageHeading({
       </p>
       <h1>
         {title}
-        <br />
-        <span>{accent}</span>
+        {accent && (
+          <>
+            <br />
+            <span>{accent}</span>
+          </>
+        )}
       </h1>
       <p className="cu-page-description">{description}</p>
       <div className="cu-heading-spectrum" aria-hidden="true">

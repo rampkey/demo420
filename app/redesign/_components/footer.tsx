@@ -10,9 +10,9 @@ export function ChromaticFooter() {
             <BrandLogo />
           </Link>
           <p>
-            Different frequency.
+            Packman Vape
             <br />
-            <span>Same identity.</span>
+            <span>Información y referencias.</span>
           </p>
           <a href="#inicio">
             Volver arriba <span aria-hidden="true">↑</span>
@@ -37,7 +37,7 @@ export function ChromaticFooter() {
             <br />
             Sin compras, pagos ni carrito.
           </p>
-          <span>PACKMAN / CHROMATIC UNDERGROUND</span>
+          <span>PACKMAN VAPE</span>
           <nav aria-label="Comparar versiones">
             <Link href="/">Comparativa</Link>
             <Link href="/original">

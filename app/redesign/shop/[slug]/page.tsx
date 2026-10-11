@@ -23,7 +23,7 @@ export async function generateMetadata({
       ? `${item.name} · Ficha informativa`
       : "Referencia no encontrada",
     description: item
-      ? `${item.name}: nombre, fotografía y descripción visual del packaging. Sin venta ni especificaciones técnicas no verificadas.`
+      ? `${item.name}: nombre, fotografía y categoría publicada. Ficha informativa, sin venta.`
       : undefined,
   };
 }
@@ -35,11 +35,14 @@ export default async function ReferencePage({
   const { slug } = await params;
   const item = getReference(slug);
   if (!item) notFound();
-  const related = references
-    .filter(
-      (other) => other.category === item.category && other.slug !== item.slug,
-    )
-    .slice(0, 3);
+  const sameCategory = references.filter(
+    (other) => other.category === item.category && other.slug !== item.slug,
+  );
+  const related = (
+    sameCategory.length
+      ? sameCategory
+      : references.filter((other) => other.slug !== item.slug)
+  ).slice(0, 3);
   return (
     <div
       className="cu-detail-page cu-container"
@@ -64,21 +67,12 @@ export default async function ReferencePage({
             sizes="(max-width:700px) 90vw, 50vw"
           />
           <div className="cu-detail-orbit" aria-hidden="true" />
-          <span>{item.tone}</span>
+          <span>PACKMAN VAPE</span>
         </div>
         <div className="cu-detail-copy">
           <p className="cu-kicker">{item.category} / FICHA INFORMATIVA</p>
           <h1>{item.name}</h1>
-          <p className="cu-detail-description">{item.description}</p>
-          <div
-            className="cu-detail-palette"
-            aria-label="Paleta aproximada de la fotografía"
-          >
-            {item.palette.map((color) => (
-              <i key={color} style={{ background: color }} aria-hidden="true" />
-            ))}
-            <span>Paleta visual</span>
-          </div>
+          <p className="cu-detail-description">{item.category}</p>
           <dl className="cu-reference-facts">
             <div>
               <dt>Marca identificada</dt>
@@ -89,11 +83,11 @@ export default async function ReferencePage({
               <dd>{item.name}</dd>
             </div>
             <div>
-              <dt>Material disponible</dt>
-              <dd>Fotografía de referencia</dd>
+              <dt>Categoría publicada</dt>
+              <dd>{item.category}</dd>
             </div>
             <div>
-              <dt>Contraste de identidad</dt>
+              <dt>Fuente de identificación</dt>
               <dd>
                 {item.verification === "product-page"
                   ? "Ficha y catálogo públicos"
@@ -118,9 +112,7 @@ export default async function ReferencePage({
         <div className="cu-section-heading">
           <div>
             <p className="cu-kicker">MÁS REFERENCIAS</p>
-            <h2>
-              Otros <span>tonos.</span>
-            </h2>
+            <h2>Otras referencias</h2>
           </div>
           <Link className="cu-text-link" href="/redesign/shop">
             Ver catálogo <Icon name="arrow" />

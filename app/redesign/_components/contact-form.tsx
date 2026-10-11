@@ -36,9 +36,7 @@ export function ContactForm() {
           SIMULACIÓN LOCAL
         </p>
         <h2>
-          Tu mensaje.
-          <br />
-          <span>Solo una vista previa.</span>
+          Formulario de contacto
         </h2>
         <p id="contact-simulation-note">
           Este formulario no envía ni guarda información. Puedes usar datos de

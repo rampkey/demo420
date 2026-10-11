@@ -6,6 +6,7 @@ import { DemoStrip } from "./_components/demo-strip";
 import "./chromatic.css";
 import "./tokens.css";
 import "./v2.css";
+import "./v3.css";
 
 export const metadata: Metadata = {
   title: {
@@ -21,7 +22,7 @@ export default function RedesignLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="chromatic-page cu-v2">
+    <div className="chromatic-page cu-v2 cu-v3">
       <ChromaticMotion>
         <div className="cu-atmosphere" aria-hidden="true">
           <i />

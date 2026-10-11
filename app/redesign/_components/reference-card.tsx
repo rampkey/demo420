@@ -19,11 +19,10 @@ export function ReferenceCard({
       <Link
         href={`/redesign/shop/${item.slug}`}
         className="cu-card-link"
-        aria-label={`Ver ficha de ${item.name}`}
       >
         <div className="cu-card-top">
           <span>
-            {item.code} / {item.category}
+            PACKMAN / {item.code}
           </span>
           <Icon name="spark" />
         </div>
@@ -43,9 +42,8 @@ export function ReferenceCard({
           <span className="cu-card-orbit" aria-hidden="true" />
         </div>
         <div className="cu-card-caption">
-          <p>{item.tone}</p>
+          <p>{item.category}</p>
           <h3>{item.name}</h3>
-          <span>{item.description}</span>
         </div>
         <div className="cu-card-bottom">
           <span>Ver ficha informativa</span>

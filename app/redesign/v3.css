@@ -1,0 +1,187 @@
+@font-face {
+  font-family: "CU Body";
+  src: url("/redesign/fonts/opensans-latin.woff2") format("woff2");
+  font-weight: 300 800;
+  font-display: swap;
+}
+@font-face {
+  font-family: "CU Grotesk";
+  src: url("/redesign/fonts/space-grotesk.woff2") format("woff2");
+  font-weight: 300 700;
+  font-display: swap;
+}
+.chromatic-page.cu-v3 {
+  --cu-body: "CU Body", "Open Sans", Arial, sans-serif;
+}
+/* V3 keeps the approved materials, motion and footer wordmark. */
+.chromatic-page.cu-v3 .cu-hero h1 {
+  font-size: clamp(64px, 7.5vw, 112px);
+  line-height: 1.02;
+  margin-block: 28px;
+}
+.chromatic-page.cu-v3 .cu-editorial {
+  margin-top: var(--cu-section-space);
+}
+.chromatic-page.cu-v3 .cu-editorial-art {
+  min-height: 460px;
+}
+.chromatic-page.cu-v3 .cu-editorial-art > img {
+  object-fit: contain;
+}
+.chromatic-page.cu-v3 .cu-section-heading h2,
+.chromatic-page.cu-v3 .cu-about-copy h2,
+.chromatic-page.cu-v3 .cu-faq h2 {
+  font-size: clamp(30px, 3.8vw, 52px);
+  line-height: 1.14;
+  max-width: 760px;
+}
+.chromatic-page.cu-v3 .cu-card-caption {
+  padding-block: 22px 18px;
+}
+.chromatic-page.cu-v3 .cu-card-caption > p {
+  font-size: 11px;
+  letter-spacing: 0.025em;
+  color: #c2b5d4;
+  min-height: 0;
+  margin-bottom: 9px;
+  overflow-wrap: anywhere;
+}
+.chromatic-page.cu-v3 .cu-card-caption h3 {
+  margin-bottom: 0;
+}
+.chromatic-page.cu-v3 .cu-gallery-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-block: 22px 30px;
+}
+.chromatic-page.cu-v3 .cu-gallery-toolbar > p {
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.chromatic-page.cu-v3 .cu-filters {
+  max-width: 100%;
+  width: auto;
+}
+.chromatic-page.cu-v3 .cu-filters button {
+  font-size: 13px;
+}
+.chromatic-page.cu-v3 .cu-catalog-search {
+  max-width: 560px;
+  margin-block: 8px 26px;
+}
+.chromatic-page.cu-v3 .cu-catalog-search label {
+  display: block;
+  font-family: var(--cu-display);
+  font-size: 13px;
+  color: #ded4e8;
+  margin-bottom: 10px;
+}
+.chromatic-page.cu-v3 .cu-catalog-search > div {
+  position: relative;
+}
+.chromatic-page.cu-v3 .cu-catalog-search input {
+  width: 100%;
+  min-height: 54px;
+  font: inherit;
+  font-size: 15px;
+  color: #f8f2ff;
+  background: #0c0b12b0;
+  border: 1px solid #b298d13b;
+  border-radius: 14px;
+  padding: 14px 54px 14px 18px;
+  appearance: none;
+}
+.chromatic-page.cu-v3 .cu-catalog-search input::-webkit-search-cancel-button {
+  display: none;
+}
+.chromatic-page.cu-v3 .cu-catalog-search input::placeholder {
+  color: #9c90aa;
+}
+.chromatic-page.cu-v3 .cu-catalog-search button {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  width: 44px;
+  height: 44px;
+  border: 0;
+  border-radius: 10px;
+  background: #9f78cd20;
+  color: #e5d5f7;
+  font-size: 24px;
+  cursor: pointer;
+}
+.chromatic-page.cu-v3 .cu-catalog-search :focus-visible {
+  outline: 2px solid #bf9cff;
+  outline-offset: 3px;
+}
+.chromatic-page.cu-v3 .cu-catalog-empty {
+  border: 1px solid var(--cu-line);
+  border-radius: 18px;
+  padding: 35px;
+  background: #14101c99;
+}
+.chromatic-page.cu-v3 .cu-catalog-empty h3 {
+  font-size: 24px;
+}
+.chromatic-page.cu-v3 .cu-catalog-empty p {
+  margin: 14px 0 24px;
+  color: #c2b5d4;
+}
+.chromatic-page.cu-v3 .cu-faq-v3 {
+  max-width: 960px;
+  padding-block: 50px 90px;
+}
+.chromatic-page.cu-v3 .cu-page-heading h1 {
+  max-width: 950px;
+  text-wrap: balance;
+}
+.chromatic-page.cu-v3 .cu-detail-copy .cu-kicker {
+  font-size: 11px;
+  line-height: 1.7;
+}
+@media (max-width: 700px) {
+  .chromatic-page.cu-v3 .cu-hero h1 {
+    font-size: clamp(56px, 15vw, 84px);
+  }
+  .chromatic-page.cu-v3 .cu-gallery-toolbar {
+    align-items: start;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .chromatic-page.cu-v3 .cu-filters {
+    gap: 8px;
+  }
+  .chromatic-page.cu-v3 .cu-filters button {
+    padding: 11px 12px;
+    font-size: 12px;
+  }
+  .chromatic-page.cu-v3 .cu-card-caption {
+    padding: 16px 12px;
+  }
+  .chromatic-page.cu-v3 .cu-card-caption > p {
+    font-size: 10px;
+    line-height: 1.5;
+  }
+  .chromatic-page.cu-v3 .cu-card-caption h3 {
+    font-size: 18px;
+  }
+  .chromatic-page.cu-v3 .cu-editorial-art {
+    min-height: 330px;
+  }
+  .chromatic-page.cu-v3 .cu-catalog-empty {
+    padding: 24px;
+  }
+  .chromatic-page.cu-v3 .cu-page-heading h1 {
+    font-size: clamp(38px, 10vw, 65px);
+  }
+}
+@media (max-width: 360px) {
+  .chromatic-page.cu-v3 .cu-card-caption h3 {
+    font-size: 16px;
+  }
+  .chromatic-page.cu-v3 .cu-card-caption > p {
+    font-size: 9px;
+  }
+}

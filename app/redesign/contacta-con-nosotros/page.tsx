@@ -9,15 +9,14 @@ export default function Contact() {
     <>
       <PageHeading
         eyebrow="PACKMAN / CONTACTO"
-        title="Un espacio"
-        accent="para tus preguntas."
-        description="Consulta la información de las referencias o explora la presentación de contacto. El formulario es una simulación local y no conecta con Packman."
+        title="Contacta con nosotros"
+        description="Consulta las preguntas frecuentes o prueba el formulario de contacto con datos de ejemplo."
       />
       <section className="cu-contact-layout cu-container">
         <div className="cu-contact-context">
           <div className="cu-contact-card">
             <Icon name="message" />
-            <h2>Antes de escribir.</h2>
+            <h2>Preguntas frecuentes</h2>
             <p>
               Encontrarás los nombres y las fotografías disponibles en el
               catálogo, y respuestas a conceptos generales en FAQ.

@@ -52,19 +52,19 @@ export function ChromaticHeader() {
       data-enhanced={enhanced ? "true" : undefined}
     >
       <noscript>
-        <style>{`@media(max-width:1120px){.chromatic-page.cu-v2 .cu-header{position:relative}.chromatic-page.cu-v2 .cu-header .cu-navigation{display:flex}}`}</style>
+        <style>{`@media(max-width:1120px){.chromatic-page.cu-v3 .cu-header:not([data-enhanced]){position:relative}.chromatic-page.cu-v3 .cu-header:not([data-enhanced]) .cu-navigation{display:flex;position:static;left:auto;right:auto;top:auto;margin-top:18px;box-shadow:none;border:0;max-height:none}}`}</style>
       </noscript>
       <div className="cu-nav-shell">
         <Link
           className="cu-brand"
           href="/redesign"
-          aria-label="Packman, inicio de la demo"
+          aria-label="Packman Vape, inicio de la demo"
         >
           <BrandLogo />
           <span>
             PACKMAN
             <br />
-            <b>CHROMATIC UNDERGROUND</b>
+            <b>VAPE</b>
           </span>
         </Link>
         <button

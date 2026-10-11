@@ -7,9 +7,8 @@ export default function Shop() {
     <>
       <PageHeading
         eyebrow="PACKMAN / SHOP"
-        title="Cada referencia."
-        accent="Su propio tono."
-        description="Los nombres, las imágenes y el packaging de Packman. Consulta las fichas de este catálogo informativo, sin precios ni funciones de compra."
+        title="Catálogo Packman"
+        description="Consulta ocho referencias con sus nombres, fotografías y categorías publicadas."
       />
       <section
         className="cu-shop-catalog cu-container"
@@ -17,11 +16,11 @@ export default function Shop() {
       >
         <ChromaticGallery />
         <div className="cu-information-note">
-          <span>INFORMACIÓN DEL CATÁLOGO</span>
+          <span>REFERENCIAS DEL CATÁLOGO</span>
           <p>
-            Una selección de ocho referencias identificadas en el sitio público.
-            Las fotografías permiten reconocer el packaging; no acreditan
-            composición, disponibilidad ni especificaciones técnicas.
+            Las categorías reproducen la clasificación de la web pública. Son
+            etiquetas de identificación; no acreditan composición ni
+            especificaciones técnicas.
           </p>
         </div>
       </section>

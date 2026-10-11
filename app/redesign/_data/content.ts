@@ -1,63 +1,49 @@
 export type Question = { question: string; answer: string };
+// Educational excerpts from the public About and FAQ pages. See docs/PACKMAN-V3.md.
 export const brandQuestions: Question[] = [
   {
-    question: "¿Qué es Packman Vape?",
+    question: "¿Cuál es nuestro objetivo principal?",
     answer:
-      "Packman identifica una gama de dispositivos de vapeo y packaging. En este catálogo informativo puedes consultar los nombres y las fotografías de las referencias identificadas en su web pública.",
+      "Nuestro objetivo es ofrecer información clara y recursos educativos relacionados con tecnología de vapeo, tendencias del sector y conceptos importantes de esta industria.",
   },
   {
     question: "¿Qué significa vaper THC?",
     answer:
-      "Es un término utilizado para dispositivos de vapeo asociados a productos que contienen THC. El término no acredita por sí mismo la composición, la seguridad ni la legalidad de una referencia concreta.",
-  },
-  {
-    question: "¿Cuál es nuestro objetivo principal?",
-    answer:
-      "Nuestro objetivo es ofrecer información clara sobre la tecnología de vapeo, la evolución del sector y sus conceptos generales.",
+      "El término vaper THC se utiliza para describir dispositivos de vapeo relacionados con productos que contienen THC.",
   },
   {
     question:
       "¿Por qué es importante la educación dentro del sector del vapeo?",
     answer:
-      "La información publicada no siempre es precisa. Contrastar las fuentes ayuda a distinguir los datos verificables de las afirmaciones que no cuentan con suficiente respaldo.",
+      "Porque existe mucha información online y no todas las fuentes ofrecen datos precisos. La educación ayuda a diferenciar información fiable de contenido poco transparente.",
   },
   {
     question: "¿Qué tipo de información ofrecemos?",
     answer:
-      "Información sobre tecnología, funcionamiento de dispositivos, tendencias y conceptos generales del sector. Este catálogo recoge los nombres y las fotografías de las referencias identificadas.",
+      "Creamos contenidos sobre tecnología, funcionamiento de dispositivos, tendencias, conceptos generales y novedades del sector.",
+  },
+  {
+    question: "¿Cómo mantenemos la calidad de nuestro contenido?",
+    answer:
+      "Mediante investigación, actualización constante y un enfoque centrado en información clara para los usuarios.",
   },
 ];
-export const demoQuestions: Question[] = [
-  {
-    question: "¿Es la web oficial de Packman?",
-    answer:
-      "No. Es una demo no oficial e independiente. No existe afiliación comercial con Packman ni se reciben compras, pedidos o pagos.",
-  },
-  {
-    question: "¿Qué datos incluyen las fichas?",
-    answer:
-      "El nombre publicado, una fotografía autorizada y una descripción de sus elementos visibles. No se presentan concentraciones, efectos, certificaciones, disponibilidad ni especificaciones técnicas como hechos verificados.",
-  },
-  {
-    question: "¿El formulario envía mi mensaje?",
-    answer:
-      "No. El formulario solo genera una vista previa en tu navegador. No envía ni guarda tus datos y no conecta con Packman ni con terceros.",
-  },
-];
+export const aboutIntro =
+  "Bienvenido a nuestro espacio dedicado a la información, innovación y conocimiento dentro del mundo del vapeo y los cannabinoides. Nuestra misión es ofrecer contenido claro, transparente y actualizado para una comunidad que busca comprender mejor la tecnología del vapeo, la evolución del sector y los conceptos clave relacionados con esta industria.";
 export const aboutPrinciples = [
   {
     number: "01",
-    title: "Información clara.",
-    body: "Explicar los conceptos de forma sencilla y facilitar el acceso a información organizada.",
+    title: "Información verificable",
+    body: "Priorizamos contenidos desarrollados con investigación, fuentes fiables y datos actualizados.",
   },
   {
     number: "02",
-    title: "Transparencia.",
-    body: "Distinguir los datos verificables de las afirmaciones que necesitan contraste.",
+    title: "Comunicación sencilla",
+    body: "Explicamos conceptos técnicos de manera fácil de entender, evitando información confusa o innecesariamente complicada.",
   },
   {
     number: "03",
-    title: "Conocimiento compartido.",
-    body: "Acercar la tecnología y la evolución del sector a una comunidad interesada en comprenderlas.",
+    title: "Mejora continua",
+    body: "El sector del vapeo cambia constantemente. Por eso actualizamos nuestros contenidos para mantenernos alineados con las nuevas tendencias y desarrollos.",
   },
 ];

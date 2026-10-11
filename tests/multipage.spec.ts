@@ -1,15 +1,15 @@
 import { test, expect } from "@playwright/test";
 
 const pages = [
-  ["/redesign/shop", "Cada referencia."],
-  ["/redesign/sobre-nosotros", "Una identidad."],
-  ["/redesign/faq", "Buenas preguntas."],
-  ["/redesign/contacta-con-nosotros", "Un espacio"],
+  ["/redesign/shop", "Catálogo Packman"],
+  ["/redesign/sobre-nosotros", "Sobre nosotros"],
+  ["/redesign/faq", "Preguntas frecuentes"],
+  ["/redesign/contacta-con-nosotros", "Contacta con nosotros"],
   ["/redesign/shop/mystery-og", "Mystery OG"],
 ] as const;
 
 for (const [route, heading] of pages) {
-  test(`V2: ${route} renders responsively with local resources`, async ({
+  test(`V3: ${route} renders responsively with local resources`, async ({
     page,
     baseURL,
   }) => {
@@ -83,7 +83,7 @@ for (const [route, heading] of pages) {
   });
 }
 
-test("V2: all five shared header destinations navigate and indicate the active page", async ({
+test("V3: all five shared header destinations navigate and indicate the active page", async ({
   page,
 }) => {
   await page.goto("/redesign");
@@ -132,24 +132,27 @@ test("V2: all five shared header destinations navigate and indicate the active p
   }
 });
 
-test("V2: catalog filters link to informational references, including unverified detail status", async ({
+test("V3: catalog filters link to informational references, with verified source categories", async ({
   page,
 }) => {
   await page.goto("/redesign/shop");
-  await page.getByRole("button", { name: "Packaging", exact: true }).click();
+  await page
+    .getByRole("button", { name: "packman 2g disposable", exact: true })
+    .click();
   await expect(page.locator(".visual-card")).toHaveCount(3);
   await expect(page.getByRole("status")).toHaveText("3 referencias");
   await page
     .getByRole("link", {
-      name: "Ver ficha de 50 Pack Variety Box",
-      exact: true,
+      name: /50 Pack Variety Box.*Ver ficha informativa/,
     })
     .click();
   await expect(page.getByRole("heading", { level: 1 })).toHaveText(
     "50 Pack Variety Box",
   );
   await expect(
-    page.getByText("La ficha original no pudo contrastarse", { exact: false }),
+    page
+      .locator(".cu-reference-facts")
+      .getByText("packman 2g disposable", { exact: true }),
   ).toBeVisible();
   await expect(
     page.locator('#chromatic-navigation a[href="/redesign/shop"]'),
@@ -157,17 +160,19 @@ test("V2: catalog filters link to informational references, including unverified
   await page
     .getByRole("link", { name: "Volver al catálogo", exact: false })
     .click();
-  await page.getByRole("button", { name: "Referencias", exact: true }).click();
-  await expect(page.locator(".visual-card")).toHaveCount(5);
   await page
-    .getByRole("link", { name: "Ver ficha de Mystery OG", exact: true })
+    .getByRole("button", { name: "Packman Live Resin", exact: true })
+    .click();
+  await expect(page.locator(".visual-card")).toHaveCount(4);
+  await page
+    .getByRole("link", { name: /Mystery OG.*Ver ficha informativa/ })
     .click();
   await expect(page.getByRole("heading", { level: 1 })).toHaveText(
     "Mystery OG",
   );
 });
 
-test("V2: eight static reference URLs work and an unknown slug returns 404", async ({
+test("V3: eight static reference URLs work and an unknown slug returns 404", async ({
   request,
 }) => {
   for (const [slug, name] of [
@@ -188,7 +193,7 @@ test("V2: eight static reference URLs work and an unknown slug returns 404", asy
   expect(missing.status()).toBe(404);
 });
 
-test("V2: contact simulation validates fields and never sends or stores a message", async ({
+test("V3: contact simulation validates fields and never sends or stores a message", async ({
   page,
 }) => {
   await page.goto("/redesign/contacta-con-nosotros", {
@@ -229,7 +234,7 @@ test("V2: contact simulation validates fields and never sends or stores a messag
   await expect(page.getByLabel("Nombre", { exact: true })).toBeFocused();
 });
 
-test("V2: scroll ambience changes gradually and freezes with reduced motion", async ({
+test("V3: scroll ambience changes gradually and freezes with reduced motion", async ({
   page,
 }) => {
   await page.goto("/redesign");
@@ -262,7 +267,7 @@ test("V2: scroll ambience changes gradually and freezes with reduced motion", as
   expect(await scene()).toBe(frozen);
 });
 
-test.describe("V2 without JavaScript", () => {
+test.describe("V3 without JavaScript", () => {
   test.use({ javaScriptEnabled: false });
   test("mobile navigation works and the form cannot transmit data", async ({
     page,
@@ -283,7 +288,10 @@ test.describe("V2 without JavaScript", () => {
       .click();
     await page.locator("summary").first().click();
     await expect(
-      page.getByText("Packman identifica una gama", { exact: false }),
+      page.getByText(
+        "Nuestro objetivo es ofrecer información clara y recursos educativos",
+        { exact: false },
+      ),
     ).toBeVisible();
   });
 });

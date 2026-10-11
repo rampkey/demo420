@@ -62,20 +62,18 @@ for (const route of ["/original", "/redesign"]) {
     await expect(
       page.locator('form, input[type="number"], input[type="email"]'),
     ).toHaveCount(0);
-    const disclosure = page
-      .locator("summary")
-      .filter({
-        hasText:
-          route === "/original"
-            ? "¿Es la web oficial de Packman?"
-            : "¿Qué es Packman Vape?",
-      });
+    const disclosure = page.locator("summary").filter({
+      hasText:
+        route === "/original"
+          ? "¿Es la web oficial de Packman?"
+          : "¿Cuál es nuestro objetivo principal?",
+    });
     await disclosure.click();
     await expect(
       page.getByText(
         route === "/original"
           ? "No. Es un estudio visual independiente"
-          : "Packman identifica una gama",
+          : "Nuestro objetivo es ofrecer información clara y recursos educativos",
         {
           exact: false,
         },
@@ -123,14 +121,18 @@ test("rediseño: los filtros cambian la galería y anuncian los resultados", asy
 }) => {
   await page.goto("/redesign");
   await expect(page.locator(".visual-card")).toHaveCount(8);
-  await page.getByRole("button", { name: "Packaging", exact: true }).click();
+  await page
+    .getByRole("button", { name: "packman 2g disposable", exact: true })
+    .click();
   await expect(page.locator(".visual-card")).toHaveCount(3);
   await expect(page.getByRole("status")).toHaveText("3 referencias");
   await expect(
-    page.getByRole("button", { name: "Packaging", exact: true }),
+    page.getByRole("button", { name: "packman 2g disposable", exact: true }),
   ).toHaveAttribute("aria-pressed", "true");
-  await page.getByRole("button", { name: "Referencias", exact: true }).click();
-  await expect(page.locator(".visual-card")).toHaveCount(5);
+  await page
+    .getByRole("button", { name: "Packman Live Resin", exact: true })
+    .click();
+  await expect(page.locator(".visual-card")).toHaveCount(4);
   await page.getByRole("button", { name: "Todo" }).click();
   await expect(page.locator(".visual-card")).toHaveCount(8);
 });
